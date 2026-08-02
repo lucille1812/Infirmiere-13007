@@ -129,10 +129,10 @@
             .header-logo { height: 250px; }
         }
 
-        /* CONTENEUR PRINCIPAL (ÉLARGI) */
+        /* CONTENEUR PRINCIPAL */
         .container {
             width: 100%;
-            max-width: 1700px; /* Élargissement de la zone centrale */
+            max-width: 1700px;
             margin: 0 auto;
             padding: 2.5rem 2rem;
             box-sizing: border-box;
@@ -159,10 +159,15 @@
             text-align: center;
         }
 
+        /* Titre "Notre Cabinet & Notre Équipe" plus grand */
+        .team-title {
+            font-size: 3.4rem;
+        }
+
         /* BANNIÈRE PAYSAGE GROUPE */
         .main-photo-container {
             width: 100%;
-            height: 600px; /* Hauteur ajustée pour équilibrer la nouvelle largeur */
+            height: 600px;
             border-radius: 16px;
             overflow: hidden;
             margin-bottom: 2rem;
@@ -178,12 +183,12 @@
             display: block;
         }
 
-        /* TEXTE PRESENTATION */
+        /* TEXTE PRESENTATION (TAILLES AUGMENTÉES) */
         .intro-box {
             background-color: #F8EFEA;
             border: 1px solid var(--terracotta-soft);
             border-radius: 16px;
-            padding: 2.2rem 3rem;
+            padding: 2.5rem 3rem;
             text-align: center;
             margin-bottom: 2.5rem;
         }
@@ -191,17 +196,17 @@
         .intro-box h3 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2.2rem;
-            margin: 0 0 0.8rem 0;
+            font-size: 3rem;
+            margin: 0 0 1rem 0;
             font-weight: 600;
         }
 
         .intro-box p {
-            font-size: 1.15rem;
+            font-size: 1.45rem;
             line-height: 1.8;
             color: var(--text-main);
             margin: 0;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
@@ -345,6 +350,9 @@
             .container { padding: 1rem; }
             .main-photo-container { height: 350px; }
             .person-photo-container { height: 380px; }
+            .team-title { font-size: 2.5rem; }
+            .intro-box h3 { font-size: 2.2rem; }
+            .intro-box p { font-size: 1.2rem; }
         }
 
         .map-box {
@@ -431,7 +439,7 @@
         
         <!-- SECTION ÉQUIPE -->
         <div class="card">
-            <h2>Notre Cabinet & Notre Équipe</h2>
+            <h2 class="team-title">Notre Cabinet & Notre Équipe</h2>
             
             <!-- PHOTO DE GROUPE PAYSAGE -->
             <div class="main-photo-container">
