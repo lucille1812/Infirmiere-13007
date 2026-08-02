@@ -64,12 +64,12 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* BANNIÈRE DU HAUT (COULEUR EXACTE DU LOGO) */
+        /* BANNIÈRE DU HAUT HAUTE ET HARMONIEUSE */
         header {
-            background-color: #EFE3D8; /* Teinte beige exacte de votre logo */
+            background-color: #EFE3D8;
             border-bottom: 1px solid var(--sand-soft);
             width: 100%;
-            padding: 3.5rem 2rem;
+            padding: 1.5rem 2rem;
             box-sizing: border-box;
             display: flex;
             justify-content: center;
@@ -80,57 +80,61 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2.5rem;
-            max-width: 1200px;
+            gap: 3rem;
+            max-width: 1400px;
+            width: 100%;
         }
 
         .header-logo {
-            height: 220px; /* Logo agrandi au maximum */
+            height: 300px; /* Logo aussi grand que la bannière */
             width: auto;
             object-fit: contain;
+            mix-blend-mode: multiply; /* FUSION PARFAITE DU FOND DU LOGO */
+            display: block;
         }
 
+        /* ALIGNEMENT TEXTE EN PILE CENTRÉE */
         .header-text {
-            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .header-title {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             text-transform: uppercase;
-            font-size: 3.2rem; /* Texte très grand et lisible */
-            margin: 0 0 0.4rem 0;
+            font-size: 4rem; /* Écrit encore plus gros */
+            margin: 0 0 0.5rem 0;
             font-weight: 600;
-            line-height: 1.1;
+            line-height: 1.05;
         }
 
         .header-sub {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 1.6rem; /* Sous-titre bien visible */
+            font-size: 2rem; /* Sous-titre encore plus gros */
             font-style: italic;
             letter-spacing: 1.5px;
             margin: 0;
             opacity: 0.95;
         }
 
-        @media (max-width: 850px) {
+        @media (max-width: 950px) {
             .header-container {
                 flex-direction: column;
                 gap: 1.5rem;
             }
-            .header-text {
-                text-align: center;
-            }
             .header-title {
-                font-size: 2.3rem;
+                font-size: 2.8rem;
             }
             .header-sub {
-                font-size: 1.3rem;
+                font-size: 1.4rem;
             }
             .header-logo {
-                height: 160px;
+                height: 200px;
             }
         }
 
@@ -415,7 +419,7 @@
         <div class="header-container">
             <img src="Logo.png" alt="Logo Cabinet Infirmier" class="header-logo">
             <div class="header-text">
-                <div class="header-title">Infirmières Libérales</div>
+                <div class="header-title">INFIRMIÈRES LIBÉRALES</div>
                 <div class="header-sub">Soins à Domicile & au Cabinet — Marseille 7e</div>
             </div>
         </div>
