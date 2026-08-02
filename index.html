@@ -35,16 +35,17 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* BANNIÈRE DU HAUT AVEC LA COULEUR #FBEEE5 */
+        /* BANNIÈRE DU HAUT */
         header {
-            background-color: #FBEEE5; /* Nouvelle couleur demandée */
+            background-color: #FBEEE5;
             border-bottom: 1px solid var(--sand-soft);
             width: 100%;
-            padding: 20px 0;
+            padding: 0;
             box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
 
         .header-container {
@@ -52,15 +53,15 @@
             align-items: center;
             justify-content: center;
             gap: 3rem;
-            max-width: 1400px;
+            max-width: 1500px;
             width: 100%;
             padding: 0 2rem;
             box-sizing: border-box;
         }
 
-        /* LOGO AGRANDI X2 */
+        /* LOGO TRÈS GRAND QUI PREND TOUT L'ESPACE */
         .header-logo {
-            height: 320px; /* Taille doublée */
+            height: 420px; /* Ajusté pour occuper quasiment toute la bannière */
             width: auto;
             object-fit: contain;
             display: block;
@@ -98,7 +99,8 @@
         @media (max-width: 950px) {
             .header-container {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 1rem;
+                padding: 1.5rem;
             }
             .header-title {
                 font-size: 2.5rem;
@@ -107,7 +109,7 @@
                 font-size: 1.3rem;
             }
             .header-logo {
-                height: 200px;
+                height: 250px;
             }
         }
 
