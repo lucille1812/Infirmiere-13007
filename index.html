@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet d'Infirmières Libérales Endoume & Corderie - Lucille Faure & Alexandra Bernard</title>
-    <meta name="description" content="Cabinet d'infirmières libérales au 255 Rue d'Endoume, 13007 Marseille. Lucille Faure (Endoume) et Alexandra Bernard (Corderie). RDV en ligne sur Doctolib.">
+    <title>Cabinet d'Infirmières Libérales 13007 - Alexandra Bernard & Lucille Faure</title>
+    <meta name="description" content="Cabinet d'infirmières libérales au 255 Rue d'Endoume, Marseille 7ème. Soins à domicile et au cabinet dans le 13007 et arrondissements limitrophes. Alexandra Bernard et Lucille Faure.">
     
     <!-- SEO Local Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
-      "name": "Cabinet d'Infirmières Libérales Faure & Bernard",
+      "name": "Cabinet d'Infirmières Libérales Bernard & Faure",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "255 Rue d'Endoume",
@@ -19,7 +19,7 @@
         "postalCode": "13007",
         "addressCountry": "FR"
       },
-      "telephon": ["0670445032", "0650990938"],
+      "telephone": ["0650990938", "0670445032"],
       "medicalSpecialty": "Nursing"
     }
     </script>
@@ -29,8 +29,8 @@
         :root {
             --bg-nude: #F9F4EF;          /* Fond de page nude doux */
             --card-bg: #FFFFFF;          /* Fond des cartes blanc pur */
-            --terracotta-dark: #A45C40;   /* Terracotta soutenu */
-            --terracotta-light: #E8A589;  /* Terracotta rosé */
+            --terracotta-dark: #A45C40;   /* Terracotta soutenu (Boutons & Titres) */
+            --terracotta-light: #E8A589;  /* Terracotta rosé (Contours) */
             --sand-soft: #EAE0D5;         /* Couleur sable */
             --text-main: #4A3E3D;         /* Texte marron chaud */
             --doctolib-blue: #0596DE;     /* Couleur officielle Doctolib */
@@ -169,9 +169,20 @@
             color: white;
         }
 
-        .btn-call-alt {
-            background-color: var(--terracotta-light);
-            color: #4A3E3D;
+        /* Carte Google Maps */
+        .map-container {
+            width: 100%;
+            height: 260px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 1rem;
+            border: 1px solid #F0E6DD;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         /* Liste d'infos */
@@ -211,27 +222,27 @@
         
         <!-- SECTION PHOTOS -->
         <div class="card">
-            <!-- Photo 1 : Photo d'équipe (Lucille & Alexandra) -->
+            <!-- Photo 1 : Photo d'équipe -->
             <div class="photo-placeholder main-photo-box">
-                [ Photo de groupe : Lucille & Alexandra ]
+                [ Photo de groupe : Alexandra & Lucille ]
             </div>
 
             <!-- Photos 2 & 3 : Présentations individuelles -->
             <div class="duo-photos">
                 <div class="person-card">
                     <div class="photo-placeholder person-photo-box">
-                        [ Photo Lucille ]
-                    </div>
-                    <p class="person-name">Lucille Faure</p>
-                    <p class="person-role">Cabinet Endoume</p>
-                </div>
-
-                <div class="person-card">
-                    <div class="photo-placeholder person-photo-box">
                         [ Photo Alexandra ]
                     </div>
                     <p class="person-name">Alexandra Bernard</p>
                     <p class="person-role">Cabinet Corderie</p>
+                </div>
+
+                <div class="person-card">
+                    <div class="photo-placeholder person-photo-box">
+                        [ Photo Lucille ]
+                    </div>
+                    <p class="person-name">Lucille Faure</p>
+                    <p class="person-role">Cabinet Endoume</p>
                 </div>
             </div>
         </div>
@@ -245,31 +256,41 @@
                 Prendre RDV sur Doctolib
             </a>
             
-            <!-- Appeler Lucille -->
+            <!-- 1er : Appeler Alexandra (Marron) -->
+            <a href="tel:0650990938" class="btn btn-call">
+                Appeler Alexandra (Corderie) : 06 50 99 09 38
+            </a>
+
+            <!-- 2ème : Appeler Lucille (Marron à l'identique) -->
             <a href="tel:0670445032" class="btn btn-call">
                 Appeler Lucille (Endoume) : 06 70 44 50 32
             </a>
-
-            <!-- Appeler Alexandra -->
-            <a href="tel:0650990938" class="btn btn-call-alt">
-                Appeler Alexandra (Corderie) : 06 50 99 09 38
-            </a>
         </div>
 
-        <!-- INFORMATIONS PRATIQUES -->
+        <!-- INFORMATIONS PRATIQUES & CARTE MAPS -->
         <div class="card">
-            <h2>Informations Pratiques</h2>
+            <h2>Informations Pratiques & Secteur</h2>
             <ul class="info-list">
                 <li><strong>Cabinet Endoume :</strong> 255 Rue d'Endoume, 13007 Marseille</li>
-                <li><strong>Secteur d'intervention :</strong> Endoume, Corderie, Saint-Victor, Malmousque, Bompard, Roucas-Blanc (13007)</li>
-                <li><strong>Soins :</strong> À domicile et au cabinet sur rendez-vous (Pansements, prélèvements sanguins, perfusions, injections...).</li>
+                <li><strong>Secteurs d'intervention :</strong> L'ensemble du <strong>7ème arrondissement de Marseille</strong> (Endoume, Corderie, Saint-Victor, Malmousque, Bompard, Roucas-Blanc) ainsi que les <strong>arrondissements limitrophes</strong>.</li>
+                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur rendez-vous (Pansements, prélèvements sanguins, perfusions, injections, soins chroniques).</li>
             </ul>
+
+            <!-- VRAI PLAN GOOGLE MAPS MARSEILLE 7ÈME -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1451.989258283437!2d5.358200!3d43.284500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9c0c39f0ed219%3A0x6b8ebfa5cd21870a!2s255%20Rue%20d&#39;Endoume%2C%2013007%20Marseille!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
 
     </div>
 
     <footer>
-        &copy; 2026 Cabinet d'Infirmières Libérales Faure & Bernard — 13007 Marseille
+        &copy; 2026 Cabinet d'Infirmières Libérales Bernard & Faure — Marseille 7ème (13007)
     </footer>
 
 </body>
