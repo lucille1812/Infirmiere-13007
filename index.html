@@ -66,7 +66,7 @@
 
         /* HEADER AVEC LOGO CENTRÉ */
         header {
-            background-color: #F6ECE4;
+            background-color: #F8EFEA;
             border-bottom: 1px solid var(--sand-soft);
             width: 100%;
             padding: 2.5rem 1.5rem;
@@ -85,9 +85,10 @@
         }
 
         .header-logo {
-            height: 110px; /* Taille alignée avec l'encart de texte */
+            height: 120px;
             width: auto;
             object-fit: contain;
+            mix-blend-mode: multiply; /* Fusionne parfaitement le fond clair de l'image avec l'en-tête */
         }
 
         .header-text {
@@ -124,7 +125,7 @@
                 text-align: center;
             }
             .header-logo {
-                height: 90px;
+                height: 100px;
             }
         }
 
@@ -252,7 +253,7 @@
 
         /* Badge pour la zone de tournée */
         .sector-badge {
-            background-color: #F6ECE4;
+            background-color: #F8EFEA;
             border: 1px solid var(--terracotta-soft);
             border-radius: 14px;
             padding: 1.2rem 1.5rem;
@@ -297,7 +298,7 @@
 
         .map-box-title {
             font-family: var(--font-title);
-            background-color: #F6ECE4;
+            background-color: #F8EFEA;
             color: var(--terracotta-dark);
             font-weight: 600;
             font-size: 1.15rem;
@@ -407,7 +408,7 @@
 
     <header>
         <div class="header-container">
-            <img src="logo.png" alt="Logo Cabinet Infirmier" class="header-logo">
+            <img src="Logo.png" alt="Logo Cabinet Infirmier" class="header-logo">
             <div class="header-text">
                 <div class="header-title">Infirmières Libérales</div>
                 <div class="header-sub">Soins à Domicile & au Cabinet — Marseille 7e</div>
