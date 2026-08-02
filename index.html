@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabinet d'Infirmières Libérales 13007 - Alexandra Bernard & Lucille Faure</title>
-    <meta name="description" content="Cabinet d'infirmières libérales au 255 Rue d'Endoume et 67 Bd de la Corderie, Marseille 7ème. Soins à domicile et au cabinet dans le 13007 et arrondissements limitrophes. Alexandra Bernard et Lucille Faure.">
+    <meta name="description" content="Cabinet d'infirmières libérales au 255 Rue d'Endoume et 67 Bd de la Corderie, Marseille 7ème. Soins à domicile dans tout le 13007 et limitrophes.">
     
     <!-- SEO Local Data -->
     <script type="application/ld+json">
@@ -38,8 +38,8 @@
         :root {
             --bg-nude: #F9F4EF;          /* Fond de page nude doux */
             --card-bg: #FFFFFF;          /* Fond des cartes blanc pur */
-            --terracotta-dark: #A45C40;   /* Terracotta soutenu (Boutons & Titres) */
-            --terracotta-light: #E8A589;  /* Terracotta rosé (Contours) */
+            --terracotta-dark: #A45C40;   /* Terracotta soutenu */
+            --terracotta-light: #E8A589;  /* Terracotta rosé */
             --sand-soft: #EAE0D5;         /* Couleur sable */
             --text-main: #4A3E3D;         /* Texte marron chaud */
             --doctolib-blue: #0596DE;     /* Couleur officielle Doctolib */
@@ -178,6 +178,20 @@
             color: white;
         }
 
+        /* Badges pour la zone de tournée */
+        .sector-badge {
+            background-color: #F4ECE1;
+            border: 1px solid var(--terracotta-light);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            margin: 0.8rem 0;
+            font-size: 0.9rem;
+        }
+
+        .sector-badge strong {
+            color: var(--terracotta-dark);
+        }
+
         /* Carte Google Maps */
         .map-container {
             width: 100%;
@@ -232,20 +246,20 @@
 <body>
 
     <header>
-        <div class="header-title">Infirmière</div>
-        <div class="header-sub">Soins & Expertise</div>
+        <div class="header-title">Infirmières Libérales</div>
+        <div class="header-sub">Soins à Domicile & au Cabinet — Marseille 7e</div>
     </header>
 
     <div class="container">
         
         <!-- SECTION PHOTOS -->
         <div class="card">
-            <!-- Photo 1 : Photo d'équipe -->
+            <!-- Photo d'équipe -->
             <div class="photo-placeholder main-photo-box">
                 [ Photo de groupe : Alexandra & Lucille ]
             </div>
 
-            <!-- Photos 2 & 3 : Présentations individuelles -->
+            <!-- Photos individuelles -->
             <div class="duo-photos">
                 <div class="person-card">
                     <div class="photo-placeholder person-photo-box">
@@ -269,33 +283,35 @@
         <div class="card">
             <h2>Prise de rendez-vous</h2>
             
-            <!-- Lien Doctolib Officiel -->
             <a href="https://www.doctolib.fr/cabinet-infirmier/marseille/cabinet-de-soins-infirmiers-faure-bernard?pid=practice-788712&phs=true&page=1" class="btn btn-doctolib" target="_blank" rel="noopener">
                 Prendre RDV sur Doctolib
             </a>
             
-            <!-- 1er : Appeler Alexandra -->
             <a href="tel:0650990938" class="btn btn-call">
                 Appeler Alexandra (Corderie) : 06 50 99 09 38
             </a>
 
-            <!-- 2ème : Appeler Lucille -->
             <a href="tel:0670445032" class="btn btn-call">
                 Appeler Lucille (Endoume) : 06 70 44 50 32
             </a>
         </div>
 
-        <!-- INFORMATIONS PRATIQUES & CARTE MAPS DES 2 CABINETS -->
+        <!-- INFORMATIONS PRATIQUES & SECTEUR D'INTERVENTION -->
         <div class="card">
-            <h2>Informations Pratiques & Adresses</h2>
+            <h2>Secteur d'Intervention & Cabinets</h2>
+            
+            <div class="sector-badge">
+                📍 <strong>Soins à domicile assurés sur :</strong><br>
+                Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Malmousque, Corniche Kennedy, Saint-Victor, Bompard, Roucas-Blanc) & <strong>arrondissements limitrophes</strong>.
+            </div>
+
             <ul class="info-list">
                 <li><strong>Cabinet Corderie :</strong> 67 Boulevard de la Corderie, 13007 Marseille</li>
                 <li><strong>Cabinet Endoume :</strong> 255 Rue d'Endoume, 13007 Marseille</li>
-                <li><strong>Secteurs d'intervention :</strong> L'ensemble du <strong>7ème arrondissement de Marseille</strong> (Endoume, Corderie, Saint-Victor, Malmousque, Bompard, Roucas-Blanc) ainsi que les <strong>arrondissements limitrophes</strong>.</li>
-                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur rendez-vous (Pansements, prélèvements sanguins, perfusions, injections, soins chroniques).</li>
+                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur rendez-vous (Pansements, prélèvements sanguins, perfusions, injections, suivi de pathologies chroniques).</li>
             </ul>
 
-            <!-- CARTE GOOGLE MAPS DES 2 CABINETS DU 7ÈME -->
+            <!-- CARTE GOOGLE MAPS -->
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11615.422589574219!2d5.356000!3d43.287000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9c0c39f0ed219%3A0x6b8ebfa5cd21870a!2s67%20Bd%20de%20la%20Corderie%2C%2013007%20Marseille!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
@@ -304,7 +320,7 @@
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-            <a href="https://www.google.com/maps/dir//67+Bd+de+la+Corderie,+13007+Marseille/255+Rue+d'Endoume,+13007+Marseille" target="_blank" class="map-link" rel="noopener">📍 Voir l'itinéraire vers nos cabinets sur Google Maps</a>
+            <a href="https://www.google.com/maps/dir//67+Bd+de+la+Corderie,+13007+Marseille/255+Rue+d'Endoume,+13007+Marseille" target="_blank" class="map-link" rel="noopener">📍 Localiser nos cabinets et itinéraires sur Google Maps</a>
         </div>
 
     </div>
