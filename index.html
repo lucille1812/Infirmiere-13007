@@ -80,7 +80,7 @@
         }
 
         .container {
-            max-width: 650px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 1.5rem 1.2rem 2rem;
         }
@@ -178,13 +178,13 @@
             color: white;
         }
 
-        /* Badges pour la zone de tournée */
+        /* Badge pour la zone de tournée */
         .sector-badge {
             background-color: #F4ECE1;
             border: 1px solid var(--terracotta-light);
             border-radius: 8px;
             padding: 0.8rem 1rem;
-            margin: 0.8rem 0;
+            margin: 0.8rem 0 1.2rem 0;
             font-size: 0.9rem;
         }
 
@@ -192,34 +192,78 @@
             color: var(--terracotta-dark);
         }
 
-        /* Carte Google Maps */
-        .map-container {
-            width: 100%;
-            height: 300px;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-top: 1rem;
-            border: 1px solid #F0E6DD;
+        /* DISPOSITION DEUX CARTES CÔTÉ À CÔTÉ */
+        .maps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-top: 1.2rem;
         }
 
-        .map-container iframe {
+        @media (max-width: 650px) {
+            .maps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .map-box {
+            background: var(--bg-nude);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #F0E6DD;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-box-title {
+            background-color: #F4ECE1;
+            color: var(--terracotta-dark);
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.6rem;
+            text-align: center;
+            border-bottom: 1px solid #EAE0D5;
+        }
+
+        .map-box iframe {
             width: 100%;
-            height: 100%;
+            height: 280px;
             border: 0;
         }
 
-        .map-links {
-            margin-top: 0.8rem;
-            font-size: 0.85rem;
+        .map-box img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border: 0;
+            display: block;
         }
 
-        .map-link {
-            display: inline-block;
-            margin-right: 1rem;
-            margin-top: 0.3rem;
+        .map-links-btns {
+            padding: 0.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            background-color: var(--card-bg);
+            margin-top: auto;
+        }
+
+        .btn-map {
+            background-color: white;
+            border: 1px solid var(--terracotta-light);
             color: var(--terracotta-dark);
-            text-decoration: underline;
-            font-weight: 500;
+            padding: 0.5rem;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .btn-map:hover {
+            background-color: var(--terracotta-dark);
+            color: white;
         }
 
         /* Liste d'infos */
@@ -301,9 +345,9 @@
             </a>
         </div>
 
-        <!-- INFORMATIONS PRATIQUES & CARTE DES 2 CABINETS -->
+        <!-- INFORMATIONS PRATIQUES & DEUX CARTES CÔTÉ À CÔTÉ -->
         <div class="card">
-            <h2>Secteur d'Intervention & Cabinets</h2>
+            <h2>Nos Cabinets & Périmètre d'Intervention</h2>
             
             <div class="sector-badge">
                 📍 <strong>Soins à domicile assurés sur :</strong><br>
@@ -313,21 +357,37 @@
             <ul class="info-list">
                 <li><strong>Cabinet Corderie :</strong> 67 Boulevard de la Corderie, 13007 Marseille</li>
                 <li><strong>Cabinet Endoume :</strong> 255 Rue d'Endoume, 13007 Marseille</li>
-                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur rendez-vous (Pansements, prélèvements sanguins, perfusions, injections, suivi de pathologies chroniques).</li>
+                <li><strong>Soins :</strong> À domicile et au cabinet sur RDV (Pansements, prélèvements sanguins, perfusions, injections, etc.).</li>
             </ul>
 
-            <!-- CARTE GOOGLE MAPS INCLUANT LES DEUX CABINETS (CORDERIE & ENDOUME) -->
-            <div class="map-container">
-                <iframe 
-                    src="https://maps.google.com/maps?q=67%20Boulevard%20de%20la%20Corderie%2013007%20Marseille%20to%20255%20Rue%20d'Endoume%2013007%20Marseille&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
+            <!-- BLOC DES DEUX CARTES -->
+            <div class="maps-grid">
+                
+                <!-- CARTE 1 : GOOGLE MAPS INTERACTIVE DES CABINETS -->
+                <div class="map-box">
+                    <div class="map-box-title">📍 Emplacement des Cabinets</div>
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Marseille%207e%20Endoume%20Corderie&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="map-links-btns">
+                        <a href="https://www.google.com/maps/search/?api=1&query=67+Boulevard+de+la+Corderie+13007+Marseille" target="_blank" class="btn-map" rel="noopener">📍 GPS Cabinet Corderie</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=255+Rue+d+Endoume+13007+Marseille" target="_blank" class="btn-map" rel="noopener">📍 GPS Cabinet Endoume</a>
+                    </div>
+                </div>
 
-            <div class="map-links">
-                <a href="https://www.google.com/maps/search/?api=1&query=67+Boulevard+de+la+Corderie+13007+Marseille" target="_blank" class="map-link" rel="noopener">📍 Google Maps : Cabinet Corderie</a>
-                <a href="https://www.google.com/maps/search/?api=1&query=255+Rue+d+Endoume+13007+Marseille" target="_blank" class="map-link" rel="noopener">📍 Google Maps : Cabinet Endoume</a>
+                <!-- CARTE 2 : IMAGE DE VOTRE ZONE D'INTERVENTION -->
+                <div class="map-box">
+                    <div class="map-box-title">🗺️ Zone de tournée à domicile</div>
+                    <img src="zone-intervention.png" alt="Zone d'intervention soins infirmiers à domicile Marseille 7ème">
+                    <div class="map-links-btns">
+                        <span style="font-size:0.75rem; text-align:center; color: var(--text-main); padding:0.3rem 0;">
+                            Périmètre d'intervention de la tournée à domicile.
+                        </span>
+                    </div>
+                </div>
+
             </div>
         </div>
 
