@@ -192,25 +192,34 @@
             display: block;
         }
 
-        /* EMPLACEMENTS PHOTOS INDIVIDUELLES */
-        .photo-placeholder {
-            width: 100%;
-            background-color: #FAF5F0;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--terracotta-dark);
-            font-family: var(--font-title);
-            font-style: italic;
-            font-size: 1.2rem;
-            border: 1.5px dashed var(--terracotta-soft);
-            box-sizing: border-box;
+        /* PHOTOS INDIVIDUELLES */
+        .duo-photos { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 1.8rem; 
         }
 
-        .duo-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; }
-        .person-card { text-align: center; }
-        .person-photo-box { height: 260px; margin-bottom: 0.8rem; }
+        .person-card { 
+            text-align: center; 
+        }
+
+        .person-photo-container {
+            width: 100%;
+            height: 380px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 4px 15px rgba(158, 90, 71, 0.06);
+            background-color: #FAF5F0;
+        }
+
+        .person-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 15%;
+            display: block;
+        }
 
         .person-name {
             font-family: var(--font-title);
@@ -373,7 +382,7 @@
         
         <!-- SECTION PHOTOS -->
         <div class="card">
-            <!-- Photo de groupe intégrée -->
+            <!-- Photo de groupe -->
             <div class="main-photo-container">
                 <img src="photo-groupe.png" alt="Alexandra Bernard et Lucille Faure - Infirmières Libérales Marseille 7" class="main-photo">
             </div>
@@ -381,16 +390,16 @@
             <!-- Photos individuelles -->
             <div class="duo-photos">
                 <div class="person-card">
-                    <div class="photo-placeholder person-photo-box">
-                        [ Photo Alexandra ]
+                    <div class="person-photo-container">
+                        <img src="alexandra.png" alt="Alexandra Bernard - Infirmière D.E." class="person-photo">
                     </div>
                     <p class="person-name">Alexandra Bernard</p>
                     <p class="person-role">Infirmière D.E.</p>
                 </div>
 
                 <div class="person-card">
-                    <div class="photo-placeholder person-photo-box">
-                        [ Photo Lucille ]
+                    <div class="person-photo-container">
+                        <img src="lucille.png" alt="Lucille Faure - Infirmière D.E." class="person-photo">
                     </div>
                     <p class="person-name">Lucille Faure</p>
                     <p class="person-role">Infirmière D.E.</p>
