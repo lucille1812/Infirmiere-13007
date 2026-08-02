@@ -81,14 +81,14 @@
             align-items: center;
             justify-content: center;
             gap: 3rem;
-            max-width: 1500px;
+            max-width: 1700px;
             width: 100%;
             padding: 0 2rem;
             box-sizing: border-box;
         }
 
         .header-logo {
-            height: 420px;
+            height: 380px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -129,10 +129,10 @@
             .header-logo { height: 250px; }
         }
 
-        /* CONTENEUR PRINCIPAL */
+        /* CONTENEUR PRINCIPAL (ÉLARGI) */
         .container {
             width: 100%;
-            max-width: 1400px;
+            max-width: 1700px; /* Élargissement de la zone centrale */
             margin: 0 auto;
             padding: 2.5rem 2rem;
             box-sizing: border-box;
@@ -152,7 +152,7 @@
         h2 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             margin-top: 0;
             margin-bottom: 1.8rem;
             font-weight: 600;
@@ -162,10 +162,10 @@
         /* BANNIÈRE PAYSAGE GROUPE */
         .main-photo-container {
             width: 100%;
-            height: 520px;
+            height: 600px; /* Hauteur ajustée pour équilibrer la nouvelle largeur */
             border-radius: 16px;
             overflow: hidden;
-            margin-bottom: 1.8rem;
+            margin-bottom: 2rem;
             box-shadow: 0 6px 20px rgba(158, 90, 71, 0.08);
             background-color: #FAF5F0;
         }
@@ -178,12 +178,12 @@
             display: block;
         }
 
-        /* TEXTE PRESENTATION NOUVEAU */
+        /* TEXTE PRESENTATION */
         .intro-box {
             background-color: #F8EFEA;
             border: 1px solid var(--terracotta-soft);
             border-radius: 16px;
-            padding: 2rem 2.5rem;
+            padding: 2.2rem 3rem;
             text-align: center;
             margin-bottom: 2.5rem;
         }
@@ -191,17 +191,17 @@
         .intro-box h3 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin: 0 0 0.8rem 0;
             font-weight: 600;
         }
 
         .intro-box p {
-            font-size: 1.05rem;
-            line-height: 1.7;
+            font-size: 1.15rem;
+            line-height: 1.8;
             color: var(--text-main);
             margin: 0;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -226,7 +226,7 @@
 
         .person-photo-container {
             width: 100%;
-            height: 420px;
+            height: 480px;
             border-radius: 16px;
             overflow: hidden;
             margin-bottom: 1.2rem;
@@ -248,12 +248,12 @@
             font-weight: 600;
             color: var(--terracotta-dark);
             margin: 0.2rem 0 0 0;
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
 
         .person-role {
             font-family: var(--font-title);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-style: italic;
             color: var(--text-main);
             margin: 0 0 1.2rem 0;
@@ -262,7 +262,7 @@
 
         .specialties-title {
             font-family: var(--font-title);
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: var(--terracotta-dark);
             margin-bottom: 0.8rem;
@@ -273,7 +273,7 @@
         .specialties-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.6rem;
             justify-content: center;
         }
 
@@ -281,17 +281,17 @@
             background-color: #F8EFEA;
             color: var(--terracotta-dark);
             border: 1px solid var(--terracotta-soft);
-            padding: 0.35rem 0.85rem;
+            padding: 0.4rem 0.95rem;
             border-radius: 20px;
-            font-size: 0.88rem;
+            font-size: 0.95rem;
             font-weight: 500;
         }
 
         /* BOUTONS RENDEZ-VOUS */
         .buttons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
         .btn {
@@ -303,7 +303,7 @@
             text-align: center;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 1.05rem;
             border-radius: 30px;
             box-sizing: border-box;
             transition: all 0.3s ease;
@@ -324,27 +324,27 @@
             border-radius: 14px;
             padding: 1.2rem 1.5rem;
             margin: 1rem 0 1.8rem 0;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
         }
 
         .sector-badge strong {
             color: var(--terracotta-dark);
             font-family: var(--font-title);
-            font-size: 1.25rem;
+            font-size: 1.3rem;
         }
 
         .maps-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.8rem;
+            gap: 2rem;
             margin-top: 1.8rem;
         }
 
-        @media (max-width: 850px) {
+        @media (max-width: 950px) {
             .duo-photos, .maps-grid { grid-template-columns: 1fr; }
-            .container { padding: 1.2rem; }
-            .main-photo-container { height: 320px; }
-            .person-photo-container { height: 350px; }
+            .container { padding: 1rem; }
+            .main-photo-container { height: 350px; }
+            .person-photo-container { height: 380px; }
         }
 
         .map-box {
@@ -361,15 +361,15 @@
             background-color: #F8EFEA;
             color: var(--terracotta-dark);
             font-weight: 600;
-            font-size: 1.2rem;
-            padding: 0.9rem;
+            font-size: 1.3rem;
+            padding: 1rem;
             text-align: center;
             border-bottom: 1px solid #EDE4DB;
         }
 
         .map-box iframe, .map-box img {
             width: 100%;
-            height: 400px;
+            height: 420px;
             border: 0;
             object-fit: cover;
             display: block;
@@ -388,31 +388,31 @@
             background-color: white;
             border: 1px solid var(--terracotta-soft);
             color: var(--terracotta-dark);
-            padding: 0.7rem;
+            padding: 0.75rem;
             border-radius: 20px;
             text-align: center;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 500;
         }
 
         .info-list { list-style: none; padding: 0; margin: 0; }
-        .info-list li { padding: 0.9rem 0; border-bottom: 1px solid #FAF5F0; font-size: 1.05rem; }
+        .info-list li { padding: 1rem 0; border-bottom: 1px solid #FAF5F0; font-size: 1.1rem; }
         .info-list li strong { color: var(--terracotta-dark); }
         .info-list li:last-child { border-bottom: none; }
 
         footer {
             text-align: center;
             padding: 3.5rem 1.5rem 3rem;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             color: var(--text-main);
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .legal-notice { font-size: 0.88rem; line-height: 1.7; margin-bottom: 2rem; color: #6E5E5C; font-style: italic; }
         .footer-divider { border: 0; height: 1px; background-color: #DCD0C5; width: 40%; margin: 2rem auto; }
-        .copyright { font-family: var(--font-title); font-size: 1.15rem; color: var(--terracotta-dark); margin: 0; }
+        .copyright { font-family: var(--font-title); font-size: 1.2rem; color: var(--terracotta-dark); margin: 0; }
     </style>
 </head>
 <body>
