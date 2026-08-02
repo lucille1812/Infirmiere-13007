@@ -157,7 +157,7 @@
             opacity: 0.8;
         }
 
-        /* Boutons de rendez-vous côte à côte sur grand écran */
+        /* Boutons de rendez-vous */
         .buttons-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -304,12 +304,36 @@
             border-bottom: none;
         }
 
+        /* STYLES FOOTER & MENTIONS LÉGALES */
         footer {
             text-align: center;
-            padding: 2.5rem 1rem;
-            font-size: 0.85rem;
-            color: var(--terracotta-dark);
-            opacity: 0.8;
+            padding: 3rem 1.5rem 2.5rem;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .legal-notice {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #5C4E4C;
+        }
+
+        .footer-divider {
+            border: 0;
+            height: 1px;
+            background-color: #D3C2B5;
+            width: 60%;
+            margin: 2rem auto;
+        }
+
+        .copyright {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin: 0;
         }
     </style>
 </head>
@@ -416,8 +440,17 @@
 
     </div>
 
+    <!-- FOOTER : MENTIONS LÉGALES DEONTOLOGIE & COPYRIGHT -->
     <footer>
-        &copy; 2026 Cabinet d'Infirmières Libérales Bernard & Faure — Marseille 7ème (13007)
+        <p class="legal-notice">
+            Site à but non publicitaire selon l’article R4312-37 du code de la Santé Publique « La profession d’infirmière ne doit pas être pratiquée comme un commerce. Tout procédé direct ou indirect de réclame ou de publicité sont interdits aux infirmières ou infirmiers. »
+        </p>
+
+        <hr class="footer-divider">
+
+        <p class="copyright">
+            © Copyright - Tous droits réservés - Mentions légales
+        </p>
     </footer>
 
 </body>
