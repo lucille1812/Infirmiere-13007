@@ -64,12 +64,12 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER AVEC LOGO CENTRÉ */
+        /* BANNIÈRE DU HAUT (COULEUR EXACTE DU LOGO) */
         header {
-            background-color: #F8EFEA;
+            background-color: #EFE3D8; /* Teinte beige exacte de votre logo */
             border-bottom: 1px solid var(--sand-soft);
             width: 100%;
-            padding: 2.5rem 1.5rem;
+            padding: 3.5rem 2rem;
             box-sizing: border-box;
             display: flex;
             justify-content: center;
@@ -80,15 +80,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
-            max-width: 1000px;
+            gap: 2.5rem;
+            max-width: 1200px;
         }
 
         .header-logo {
-            height: 120px;
+            height: 220px; /* Logo agrandi au maximum */
             width: auto;
             object-fit: contain;
-            mix-blend-mode: multiply; /* Fusionne parfaitement le fond clair de l'image avec l'en-tête */
         }
 
         .header-text {
@@ -98,10 +97,10 @@
         .header-title {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            font-size: 2.2rem;
-            margin: 0 0 0.2rem 0;
+            font-size: 3.2rem; /* Texte très grand et lisible */
+            margin: 0 0 0.4rem 0;
             font-weight: 600;
             line-height: 1.1;
         }
@@ -109,23 +108,29 @@
         .header-sub {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 1.25rem;
+            font-size: 1.6rem; /* Sous-titre bien visible */
             font-style: italic;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin: 0;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 850px) {
             .header-container {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
             }
             .header-text {
                 text-align: center;
             }
+            .header-title {
+                font-size: 2.3rem;
+            }
+            .header-sub {
+                font-size: 1.3rem;
+            }
             .header-logo {
-                height: 100px;
+                height: 160px;
             }
         }
 
@@ -152,7 +157,7 @@
         h2 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             margin-top: 0;
             margin-bottom: 1.5rem;
             font-weight: 600;
@@ -200,13 +205,13 @@
             font-weight: 600;
             color: var(--terracotta-dark);
             margin: 0.5rem 0 0 0;
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             letter-spacing: 0.5px;
         }
 
         .person-role {
             font-family: var(--font-title);
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             font-style: italic;
             color: var(--text-main);
             margin: 0;
@@ -229,7 +234,7 @@
             text-align: center;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 1rem;
             letter-spacing: 0.5px;
             border-radius: 30px;
             box-sizing: border-box;
@@ -258,13 +263,13 @@
             border-radius: 14px;
             padding: 1.2rem 1.5rem;
             margin: 1rem 0 1.8rem 0;
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
 
         .sector-badge strong {
             color: var(--terracotta-dark);
             font-family: var(--font-title);
-            font-size: 1.15rem;
+            font-size: 1.25rem;
         }
 
         /* DISPOSITION DEUX CARTES */
@@ -301,7 +306,7 @@
             background-color: #F8EFEA;
             color: var(--terracotta-dark);
             font-weight: 600;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             padding: 0.9rem;
             text-align: center;
             border-bottom: 1px solid #EDE4DB;
@@ -338,7 +343,7 @@
             border-radius: 20px;
             text-align: center;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.2s;
         }
@@ -358,7 +363,7 @@
         .info-list li {
             padding: 0.9rem 0;
             border-bottom: 1px solid #FAF5F0;
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
 
         .info-list li strong {
