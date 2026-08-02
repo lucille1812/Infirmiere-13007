@@ -1,1 +1,276 @@
-index.html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet d'Infirmières Libérales Endoume & Corderie - Lucille Faure & Alexandra Bernard</title>
+    <meta name="description" content="Cabinet d'infirmières libérales au 255 Rue d'Endoume, 13007 Marseille. Lucille Faure (Endoume) et Alexandra Bernard (Corderie). RDV en ligne sur Doctolib.">
+    
+    <!-- SEO Local Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Cabinet d'Infirmières Libérales Faure & Bernard",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "255 Rue d'Endoume",
+        "addressLocality": "Marseille",
+        "postalCode": "13007",
+        "addressCountry": "FR"
+      },
+      "telephon": ["0670445032", "0650990938"],
+      "medicalSpecialty": "Nursing"
+    }
+    </script>
+
+    <style>
+        /* PALETTE PINTEREST : Terracotta & Nude / Sand */
+        :root {
+            --bg-nude: #F9F4EF;          /* Fond de page nude doux */
+            --card-bg: #FFFFFF;          /* Fond des cartes blanc pur */
+            --terracotta-dark: #A45C40;   /* Terracotta soutenu */
+            --terracotta-light: #E8A589;  /* Terracotta rosé */
+            --sand-soft: #EAE0D5;         /* Couleur sable */
+            --text-main: #4A3E3D;         /* Texte marron chaud */
+            --doctolib-blue: #0596DE;     /* Couleur officielle Doctolib */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-nude);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 2.5rem 1rem 1.5rem;
+            background-color: #F4ECE1;
+            border-bottom: 1px solid var(--sand-soft);
+        }
+
+        .header-title {
+            color: var(--terracotta-dark);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin: 0 0 0.3rem 0;
+            font-weight: 600;
+        }
+
+        .header-sub {
+            color: var(--terracotta-dark);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            opacity: 0.85;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 1.5rem 1.2rem 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(164, 92, 64, 0.05);
+            border: 1px solid #F0E6DD;
+        }
+
+        h2 {
+            color: var(--terracotta-dark);
+            font-size: 1.15rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Emplacements photos */
+        .photo-placeholder {
+            width: 100%;
+            background-color: var(--bg-nude);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--terracotta-dark);
+            font-style: italic;
+            border: 2px dashed var(--terracotta-light);
+            box-sizing: border-box;
+        }
+
+        .main-photo-box {
+            height: 280px;
+            margin-bottom: 1.2rem;
+        }
+
+        .duo-photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .person-card {
+            text-align: center;
+        }
+
+        .person-photo-box {
+            height: 180px;
+            margin-bottom: 0.5rem;
+        }
+
+        .person-name {
+            font-weight: 600;
+            color: var(--terracotta-dark);
+            margin: 0.3rem 0 0 0;
+            font-size: 1rem;
+        }
+
+        .person-role {
+            font-size: 0.85rem;
+            color: var(--text-main);
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* Boutons */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem 0;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 10px;
+            margin-top: 0.8rem;
+            box-sizing: border-box;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-doctolib {
+            background-color: var(--doctolib-blue);
+            color: white;
+        }
+
+        .btn-call {
+            background-color: var(--terracotta-dark);
+            color: white;
+        }
+
+        .btn-call-alt {
+            background-color: var(--terracotta-light);
+            color: #4A3E3D;
+        }
+
+        /* Liste d'infos */
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--bg-nude);
+            font-size: 0.95rem;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.8rem;
+            color: var(--terracotta-dark);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-title">Infirmière</div>
+        <div class="header-sub">Soins & Expertise</div>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECTION PHOTOS -->
+        <div class="card">
+            <!-- Photo 1 : Photo d'équipe (Lucille & Alexandra) -->
+            <div class="photo-placeholder main-photo-box">
+                [ Photo de groupe : Lucille & Alexandra ]
+            </div>
+
+            <!-- Photos 2 & 3 : Présentations individuelles -->
+            <div class="duo-photos">
+                <div class="person-card">
+                    <div class="photo-placeholder person-photo-box">
+                        [ Photo Lucille ]
+                    </div>
+                    <p class="person-name">Lucille Faure</p>
+                    <p class="person-role">Cabinet Endoume</p>
+                </div>
+
+                <div class="person-card">
+                    <div class="photo-placeholder person-photo-box">
+                        [ Photo Alexandra ]
+                    </div>
+                    <p class="person-name">Alexandra Bernard</p>
+                    <p class="person-role">Cabinet Corderie</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRISE DE RENDEZ-VOUS -->
+        <div class="card">
+            <h2>Prise de rendez-vous</h2>
+            
+            <!-- Lien Doctolib Officiel -->
+            <a href="https://www.doctolib.fr/cabinet-infirmier/marseille/cabinet-de-soins-infirmiers-faure-bernard?pid=practice-788712&phs=true&page=1" class="btn btn-doctolib" target="_blank" rel="noopener">
+                Prendre RDV sur Doctolib
+            </a>
+            
+            <!-- Appeler Lucille -->
+            <a href="tel:0670445032" class="btn btn-call">
+                Appeler Lucille (Endoume) : 06 70 44 50 32
+            </a>
+
+            <!-- Appeler Alexandra -->
+            <a href="tel:0650990938" class="btn btn-call-alt">
+                Appeler Alexandra (Corderie) : 06 50 99 09 38
+            </a>
+        </div>
+
+        <!-- INFORMATIONS PRATIQUES -->
+        <div class="card">
+            <h2>Informations Pratiques</h2>
+            <ul class="info-list">
+                <li><strong>Cabinet Endoume :</strong> 255 Rue d'Endoume, 13007 Marseille</li>
+                <li><strong>Secteur d'intervention :</strong> Endoume, Corderie, Saint-Victor, Malmousque, Bompard, Roucas-Blanc (13007)</li>
+                <li><strong>Soins :</strong> À domicile et au cabinet sur rendez-vous (Pansements, prélèvements sanguins, perfusions, injections...).</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Cabinet d'Infirmières Libérales Faure & Bernard — 13007 Marseille
+    </footer>
+
+</body>
+</html>
