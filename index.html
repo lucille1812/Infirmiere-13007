@@ -202,6 +202,13 @@
             width: 100%;
         }
 
+        .intro-box .key-points {
+            margin-top: 1.2rem;
+            font-weight: 600;
+            color: var(--terracotta-dark);
+            font-size: 1.35rem;
+        }
+
         /* CARTES INDIVIDUELLES PORTRAITS */
         .duo-photos { 
             display: grid; 
@@ -395,11 +402,11 @@
         }
 
         /* ===================================================
-           SYSTÈME FLOTTANT (SMARTPHONE - REFAIT DE ZÉRO)
+           SYSTÈME FLOTTANT (SMARTPHONE)
         =================================================== */
         @media (max-width: 950px) {
             body {
-                padding-bottom: 210px !important; /* Dégage le bas de page pour la grosse barre */
+                padding-bottom: 210px !important;
             }
 
             .floating-action-container {
@@ -413,7 +420,7 @@
                 -webkit-backdrop-filter: blur(12px);
                 border-top: 2px solid var(--terracotta-soft);
                 padding: 12px 16px 16px 16px;
-                flex-direction: column; /* Superposition verticale sur mobile */
+                flex-direction: column;
                 align-items: stretch;
                 gap: 8px;
                 box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15);
@@ -424,7 +431,7 @@
                 justify-content: center;
                 padding: 14px 18px;
                 border-radius: 14px;
-                font-size: 1.15rem; /* Écriture grande et lisible */
+                font-size: 1.15rem;
                 font-weight: 700;
                 box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
                 border: none;
@@ -679,6 +686,12 @@
             margin: 0 auto;
         }
 
+        .emergency-notice {
+            font-size: 1.15rem;
+            color: var(--terracotta-dark);
+            margin-bottom: 1rem;
+        }
+
         .legal-notice { font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; color: #6E5E5C; font-style: italic; }
         .footer-divider { border: 0; height: 1px; background-color: #DCD0C5; width: 40%; margin: 2rem auto; }
         .copyright { font-family: var(--font-title); font-size: 1.3rem; color: var(--terracotta-dark); margin: 0; }
@@ -732,6 +745,7 @@
                     Installées dans le 7ème arrondissement de Marseille, nous assurons la continuité des soins<br>
                     7j/7 à domicile ainsi qu'au cabinet.
                 </p>
+                <p class="key-points">• Tiers payant • Accès PMR • Sorties d’hospitalisation</p>
             </div>
 
             <!-- PHOTOS INDIVIDUELLES ET SPÉCIALITÉS -->
@@ -885,19 +899,7 @@
                 <button class="faq-question">Je n'ai pas d'ordonnance médicale, puis-je tout de même bénéficier de soins infirmiers ?</button>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        <p><strong>Oui, c'est tout à fait possible.</strong></p>
-                        <p>L'exercice infirmier comprend une part d'autonomie appelée le <strong>« rôle propre »</strong>. Dans ce cadre, l'infirmier(e) est habilité(e) à évaluer vos besoins et dispenser des soins d'hygiène, de prévention, de conseil ou d'accompagnement de sa propre initiative.</p>
-                        
-                        <blockquote>
-                            « Relèvent du rôle propre de l'infirmier ou de l'infirmière les soins liés aux fonctions d'entretien et de continuité de la vie [...]. Dans ce cadre, l'infirmier ou l'infirmière a compétence pour prendre les initiatives et accomplir les soins qu'il juge nécessaires. »<br>
-                            <strong>— Article R. 4311-3 du Code de la Santé Publique</strong>
-                        </blockquote>
-
-                        <p><strong>À savoir concernant la prise en charge :</strong></p>
-                        <ul>
-                            <li><strong>Soins sans ordonnance / Hors nomenclature :</strong> Les prestations réalisées sans prescription médicale ou non inscrites à la nomenclature de la Sécurité Sociale restent entièrement réalisables, mais elles sont à la charge directe du patient (un devis ou tarif vous sera communiqué au préalable).</li>
-                            <li><strong>Soins sur ordonnance :</strong> Une prescription médicale préalable du médecin reste obligatoire pour les actes complexes (injections, pansements lourds, perfusions...) et pour bénéficier du remboursement par l'Assurance Maladie et votre mutuelle.</li>
-                        </ul>
+                        <p>Cela dépend du soin.<br>Certains actes relevant du rôle propre infirmier ou certaines consultations de prévention peuvent être proposés sans ordonnance. Les soins remboursables tels que les injections, perfusions ou pansements prescrits nécessitent généralement une prescription médicale.</p>
                     </div>
                 </div>
             </div>
@@ -925,8 +927,10 @@
 
     <!-- FOOTER -->
     <footer>
+        <p class="emergency-notice"><strong>En cas d’urgence vitale, composez le 15 ou le 112.</strong></p>
+
         <p class="legal-notice">
-            Site à but non publicitaire selon l’article R4312-37 du code de la Santé Publique « La profession d’infirmière ne doit pas être pratiquée comme un commerce. Tout procédé direct ou indirect de réclame ou de publicité sont interdits aux infirmières ou infirmiers. »
+            Site professionnel d’information conformément aux règles déontologiques applicables à la profession infirmière. Les informations présentées sont objectives et ne constituent pas une publicité comparative.
         </p>
 
         <hr class="footer-divider">
