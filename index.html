@@ -209,7 +209,7 @@
             width: 100%;
         }
 
-        /* CARTES INDIVIDUELLES PORTRAITS */
+        /* CARTES INDIVIDUELLES PORTRAITS (POLICES AUGMENTÉES DE 6 PTS) */
         .duo-photos { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
@@ -220,7 +220,7 @@
             background: #FFFFFF;
             border: 1px solid #F3EAED;
             border-radius: 20px;
-            padding: 2rem 1.2rem;
+            padding: 2rem 1.5rem;
             box-shadow: 0 6px 18px rgba(158, 90, 71, 0.04);
             text-align: center; 
             display: flex;
@@ -233,7 +233,7 @@
             height: 540px;
             border-radius: 16px;
             overflow: hidden;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
             background-color: var(--portrait-bg);
             display: flex;
             justify-content: center;
@@ -252,23 +252,23 @@
             font-weight: 600;
             color: var(--terracotta-dark);
             margin: 0.2rem 0 0 0;
-            font-size: 2.4rem;
+            font-size: 2.8rem; /* Augmenté de 6 pt (+0.4rem) */
         }
 
         .person-role {
             font-family: var(--font-title);
-            font-size: 1.45rem;
+            font-size: 1.85rem; /* Augmenté de 6 pt (+0.4rem) */
             font-style: italic;
             color: var(--text-main);
-            margin: 0 0 1rem 0;
+            margin: 0 0 1.2rem 0;
             opacity: 0.85;
         }
 
         .person-bio {
-            font-size: 1.2rem;
+            font-size: 1.6rem; /* Augmenté de 6 pt (+0.4rem) */
             color: var(--text-main);
             line-height: 1.7;
-            margin: 0 0 1.5rem 0;
+            margin: 0 0 1.8rem 0;
             padding: 0;
             width: 100%;
             box-sizing: border-box;
@@ -276,10 +276,10 @@
 
         .specialties-title {
             font-family: var(--font-title);
-            font-size: 1.35rem;
+            font-size: 1.75rem; /* Augmenté de 6 pt (+0.4rem) */
             font-weight: 600;
             color: var(--terracotta-dark);
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -287,7 +287,7 @@
         .specialties-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.6rem;
+            gap: 0.75rem;
             justify-content: center;
         }
 
@@ -295,10 +295,11 @@
             background-color: #F8EFEA;
             color: var(--terracotta-dark);
             border: 1px solid var(--terracotta-soft);
-            padding: 0.5rem 1.05rem;
-            border-radius: 20px;
-            font-size: 1.05rem;
+            padding: 0.65rem 1.2rem;
+            border-radius: 24px;
+            font-size: 1.45rem; /* Augmenté de 6 pt (+0.4rem) */
             font-weight: 500;
+            line-height: 1.4;
         }
 
         /* BOUTONS RENDEZ-VOUS (OPTIMISÉS MOBILES) */
@@ -356,7 +357,7 @@
             font-weight: 500;
         }
 
-        /* BLOCS RASSURANCE & INFOS (POLICE AUGMENTÉE DE 2 PTS) */
+        /* BLOCS RASSURANCE & INFOS */
         .info-box-container {
             background-color: #F8EFEA;
             border: 1px solid var(--terracotta-soft);
@@ -377,7 +378,7 @@
         .info-single-column ul {
             margin: 0;
             padding-left: 1.5rem;
-            font-size: 1.38rem; /* Augmentation de 2 points */
+            font-size: 1.38rem;
             line-height: 1.85;
             color: var(--text-main);
             text-align: left;
@@ -464,6 +465,11 @@
             .card { padding: 1.5rem; }
             .main-photo-container { height: 350px; }
             .person-photo-container { height: 420px; }
+            .person-name { font-size: 2.2rem; }
+            .person-role { font-size: 1.4rem; }
+            .person-bio { font-size: 1.25rem; }
+            .specialties-title { font-size: 1.35rem; }
+            .tag { font-size: 1.15rem; }
             .team-title { font-size: 2.7rem; }
             .intro-box h3 { font-size: 2.4rem; }
             .intro-box p { font-size: 1.25rem; }
@@ -683,7 +689,7 @@
                         </li>
                         <li>
                             <strong>Moyens de paiement acceptés :</strong> 
-                            Pour les actes hors nomenclature (soins réalisés sans ordonnance) ou la part restant à votre charge, le cabinet accepte les espèces et les virements bancaires.
+                            Pour les actes hors nomenclature (soins réalisés sans ordonnance) ou la part restant à votre charge, le&nbsp;cabinet accepte les espèces et les virements bancaires.
                         </li>
                     </ul>
                 </div>
@@ -765,7 +771,7 @@
                 <button class="faq-question">Intervenez-vous les dimanches et jours fériés ?</button>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        <p>Oui, pour assurer la continuité des soins indispensable à votre santé, le cabinet assure des permanences et interventions à domicile 7 jours sur 7, y compris les dimanches et jours fériés sur rendez-vous.</p>
+                        <p>Oui, pour assurer la continuité des soins indispensable à votre santé, le cabinet me assure des permanences et interventions à domicile 7 jours sur 7, y compris les dimanches et jours fériés sur rendez-vous.</p>
                     </div>
                 </div>
             </div>
