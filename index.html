@@ -675,6 +675,7 @@
             padding: 1.2rem 0;
         }
 
+        /* PIED DE PAGE EPURÉ & RÉGLEMENTAIRE */
         footer {
             text-align: center;
             padding: 3.5rem 1.5rem 3rem;
@@ -690,9 +691,44 @@
             margin-bottom: 1rem;
         }
 
-        .legal-notice { font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; color: #6E5E5C; font-style: italic; }
-        .footer-divider { border: 0; height: 1px; background-color: #DCD0C5; width: 40%; margin: 2rem auto; }
-        .copyright { font-family: var(--font-title); font-size: 1.3rem; color: var(--terracotta-dark); margin: 0; }
+        .legal-notice { 
+            font-size: 0.95rem; 
+            line-height: 1.7; 
+            margin-bottom: 1.2rem; 
+            color: #6E5E5C; 
+            font-style: italic; 
+        }
+
+        .legal-links {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .legal-links a {
+            color: var(--terracotta-dark);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 8px;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-divider { 
+            border: 0; 
+            height: 1px; 
+            background-color: #DCD0C5; 
+            width: 40%; 
+            margin: 1.5rem auto; 
+        }
+
+        .copyright { 
+            font-family: var(--font-title); 
+            font-size: 1.3rem; 
+            color: var(--terracotta-dark); 
+            margin: 0; 
+        }
     </style>
 </head>
 <body>
@@ -923,7 +959,7 @@
 
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER EPURÉ ET CONFORME -->
     <footer>
         <p class="emergency-notice"><strong>En cas d’urgence vitale, composez le 15 ou le 112.</strong></p>
 
@@ -931,10 +967,14 @@
             Site professionnel d’information conformément aux règles déontologiques applicables à la profession infirmière. Les informations présentées sont objectives et ne constituent pas une publicité comparative.
         </p>
 
+        <p class="legal-links">
+            <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a>
+        </p>
+
         <hr class="footer-divider">
 
         <p class="copyright">
-            © Copyright - Tous droits réservés - Mentions légales
+            © Cabinet d'Infirmières Libérales Marseille 7 - Tous droits réservés
         </p>
     </footer>
 
