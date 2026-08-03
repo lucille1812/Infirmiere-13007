@@ -300,10 +300,10 @@
             font-weight: 500;
         }
 
-        /* BOUTONS RENDEZ-VOUS (Ajustés pour visibilité & contenance parfaite) */
+        /* BOUTONS RENDEZ-VOUS (OPTIMISÉS POUR LES ÉCRANS MOBILES) */
         .buttons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
@@ -313,13 +313,11 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 65px;
-            padding: 1.3rem 1.5rem;
+            min-height: 70px;
+            padding: 0.9rem 1.2rem;
             text-align: center;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-            line-height: 1.35;
+            line-height: 1.3;
             border-radius: 35px;
             box-sizing: border-box;
             transition: all 0.3s ease;
@@ -333,8 +331,29 @@
             box-shadow: 0 6px 18px rgba(0,0,0,0.12);
         }
 
-        .btn-doctolib { background-color: var(--doctolib-blue); color: white; }
-        .btn-call { background-color: var(--terracotta-dark); color: white; }
+        .btn-doctolib { 
+            background-color: var(--doctolib-blue); 
+            color: white; 
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .btn-call { 
+            background-color: var(--terracotta-dark); 
+            color: white; 
+        }
+
+        .btn-call strong {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .btn-call small {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
 
         /* BLOC RASSURANCE (Une seule colonne, texte centré à gauche) */
         .info-box-container {
@@ -441,6 +460,7 @@
         @media (max-width: 950px) {
             .duo-photos, .maps-grid { grid-template-columns: 1fr; }
             .container { padding: 1rem; }
+            .card { padding: 1.5rem; }
             .main-photo-container { height: 350px; }
             .person-photo-container { height: 420px; }
             .team-title { font-size: 2.5rem; }
@@ -449,7 +469,9 @@
             .intro-box br { display: none; }
             .info-box-container { padding: 1.5rem; }
             .info-single-column ul { padding-left: 1.2rem; font-size: 1.05rem; }
-            .btn { font-size: 1.1rem; padding: 1rem; }
+            .btn-doctolib { font-size: 1.1rem; }
+            .btn-call strong { font-size: 1.15rem; }
+            .btn-call small { font-size: 1rem; }
         }
 
         .map-box {
@@ -621,11 +643,11 @@
                 </a>
                 
                 <a href="tel:0650990938" class="btn btn-call">
-                    Appeler Alexandra : 06 50 99 09 38
+                    <span><strong>Appeler Alexandra</strong><br><small>06 50 99 09 38</small></span>
                 </a>
 
                 <a href="tel:0670445032" class="btn btn-call">
-                    Appeler Lucille : 06 70 44 50 32
+                    <span><strong>Appeler Lucille</strong><br><small>06 70 44 50 32</small></span>
                 </a>
             </div>
 
