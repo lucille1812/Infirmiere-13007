@@ -206,7 +206,7 @@
             color: var(--text-main);
             margin: 0 auto;
             max-width: 1300px;
-            text-wrap: balance; /* Équilibre automatique des lignes */
+            text-wrap: balance;
         }
 
         /* CARTES INDIVIDUELLES PORTRAITS */
@@ -220,7 +220,7 @@
             background: #FFFFFF;
             border: 1px solid #F3EAED;
             border-radius: 20px;
-            padding: 2rem 1.2rem; /* Légèrement réduit latéralement pour donner plus d'espace au texte */
+            padding: 2rem 1.2rem;
             box-shadow: 0 6px 18px rgba(158, 90, 71, 0.04);
             text-align: center; 
             display: flex;
@@ -271,7 +271,7 @@
             margin: 0 0 1.5rem 0;
             padding: 0;
             width: 100%;
-            text-wrap: balance; /* Équilibre élégant du texte sans saut forcé */
+            text-wrap: balance;
         }
 
         .specialties-title {
@@ -332,21 +332,6 @@
         .btn-call { background-color: var(--terracotta-dark); color: white; }
 
         /* PERIMETRE & CARTES */
-        .sector-badge {
-            background-color: #F8EFEA;
-            border: 1px solid var(--terracotta-soft);
-            border-radius: 14px;
-            padding: 1.2rem 1.5rem;
-            margin: 1rem 0 1.8rem 0;
-            font-size: 1.1rem;
-        }
-
-        .sector-badge strong {
-            color: var(--terracotta-dark);
-            font-family: var(--font-title);
-            font-size: 1.3rem;
-        }
-
         .maps-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -411,6 +396,14 @@
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
+        }
+
+        .sector-caption {
+            font-size: 0.95rem;
+            text-align: center;
+            color: var(--text-main);
+            padding: 0.5rem 0.5rem;
+            line-height: 1.5;
         }
 
         .info-list { list-style: none; padding: 0; margin: 0; }
@@ -534,11 +527,6 @@
         <!-- INFORMATIONS PRATIQUES & CARTES -->
         <div class="card">
             <h2>Nos Cabinets & Périmètre d'Intervention</h2>
-            
-            <div class="sector-badge">
-                📍 <strong>Soins à domicile assurés sur :</strong><br>
-                Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Malmousque, Corniche Kennedy, Saint-Victor, Bompard, Roucas-Blanc) & <strong>arrondissements limitrophes</strong>.
-            </div>
 
             <ul class="info-list">
                 <li><strong>Cabinet Corderie :</strong> 67 Boulevard de la Corderie, 13007 Marseille</li>
@@ -548,25 +536,26 @@
 
             <div class="maps-grid">
                 <div class="map-box">
-                    <div class="map-box-title">📍 Emplacement des Cabinets</div>
+                    <div class="map-box-title">Emplacement des Cabinets</div>
                     <iframe 
                         src="https://maps.google.com/maps?q=Marseille%207e%20Endoume%20Corderie&t=&z=14&ie=UTF8&iwloc=&output=embed" 
                         allowfullscreen="" 
                         loading="lazy">
                     </iframe>
                     <div class="map-links-btns">
-                        <a href="https://www.google.com/maps/search/?api=1&query=67+Boulevard+de+la+Corderie+13007+Marseille" target="_blank" class="btn-map" rel="noopener">📍 GPS Cabinet Corderie</a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=255+Rue+d+Endoume+13007+Marseille" target="_blank" class="btn-map" rel="noopener">📍 GPS Cabinet Endoume</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=67+Boulevard+de+la+Corderie+13007+Marseille" target="_blank" class="btn-map" rel="noopener">GPS Cabinet Corderie</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=255+Rue+d+Endoume+13007+Marseille" target="_blank" class="btn-map" rel="noopener">GPS Cabinet Endoume</a>
                     </div>
                 </div>
 
                 <div class="map-box">
-                    <div class="map-box-title">🗺️ Zone de tournée à domicile</div>
+                    <div class="map-box-title">Périmètre d'intervention à domicile</div>
                     <img src="zone-intervention.png" alt="Zone d'intervention soins infirmiers à domicile Marseille 7ème">
                     <div class="map-links-btns">
-                        <span style="font-size:0.85rem; text-align:center; color: var(--text-main); padding:0.4rem 0; font-family: var(--font-title); font-style: italic;">
-                            Périmètre d'intervention de la tournée à domicile.
-                        </span>
+                        <div class="sector-caption">
+                            <strong>Soins à domicile assurés sur :</strong><br>
+                            Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Samatan, Saint-Victor, Bompard, Roucas-Blanc) & arrondissements limitrophes.
+                        </div>
                     </div>
                 </div>
             </div>
