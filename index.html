@@ -355,7 +355,7 @@
         }
 
         /* ===================================================
-           SYSTÈME HYBRIDE : ÉCRAN ORDINATEUR (OPTION A - À DROITE)
+           SYSTÈME FLOTTANT (ORDINATEUR + TABLETTE)
         =================================================== */
         .floating-action-container {
             position: fixed;
@@ -371,30 +371,35 @@
         .floating-btn {
             background-color: var(--doctolib-blue);
             color: white;
-            padding: 14px 22px;
+            padding: 16px 26px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            box-shadow: 0 8px 25px rgba(5, 150, 222, 0.35);
+            font-weight: 700;
+            font-size: 1.15rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
             gap: 10px;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 2px solid white;
+            box-sizing: border-box;
+        }
+
+        .floating-btn-call {
+            background-color: var(--terracotta-dark);
         }
 
         .floating-btn:hover {
             transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 12px 30px rgba(5, 150, 222, 0.45);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
         }
 
         /* ===================================================
-           SYSTÈME HYBRIDE : SMARTPHONE (OPTION B - BARRE DU BAS)
+           SYSTÈME FLOTTANT (SMARTPHONE - REFAIT DE ZÉRO)
         =================================================== */
         @media (max-width: 950px) {
             body {
-                padding-bottom: 80px; /* Espace pour pas cacher le bas de page sur mobile */
+                padding-bottom: 210px !important; /* Dégage le bas de page pour la grosse barre */
             }
 
             .floating-action-container {
@@ -403,30 +408,30 @@
                 left: 0;
                 right: 0;
                 top: auto;
-                background: rgba(255, 255, 255, 0.92);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                border-top: 1px solid rgba(217, 155, 130, 0.4);
-                padding: 10px 15px;
-                flex-direction: row;
-                justify-content: center;
-                gap: 10px;
-                box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.08);
+                background: rgba(255, 255, 255, 0.96);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-top: 2px solid var(--terracotta-soft);
+                padding: 12px 16px 16px 16px;
+                flex-direction: column; /* Superposition verticale sur mobile */
+                align-items: stretch;
+                gap: 8px;
+                box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15);
             }
 
             .floating-btn {
-                flex: 1;
+                width: 100%;
                 justify-content: center;
-                padding: 11px 10px;
-                border-radius: 12px;
-                font-size: 0.9rem;
-                box-shadow: none;
+                padding: 14px 18px;
+                border-radius: 14px;
+                font-size: 1.15rem; /* Écriture grande et lisible */
+                font-weight: 700;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
                 border: none;
             }
 
             .floating-btn-call {
                 display: flex !important;
-                background-color: var(--terracotta-dark);
             }
 
             .duo-photos, .maps-grid { grid-template-columns: 1fr; }
@@ -456,13 +461,6 @@
             .header-title { font-size: 2.7rem; }
             .header-sub { font-size: 1.4rem; }
             .header-logo { height: 250px; }
-        }
-
-        /* Masquer les boutons d'appel directs sur grand écran dans le module flottant */
-        @media (min-width: 951px) {
-            .floating-btn-call {
-                display: none;
-            }
         }
 
         /* BLOCS RASSURANCE & INFOS */
@@ -688,7 +686,7 @@
 </head>
 <body>
 
-    <!-- SYSTEME HYBRIDE (BOUTON DROITE SUR ORDI / BARRE FIXE SUR MOBILE) -->
+    <!-- SYSTEME FLOTTANT ACCESSIBLE PARTOUT -->
     <div class="floating-action-container">
         <a href="https://www.doctolib.fr/cabinet-infirmier/marseille/cabinet-de-soins-infirmiers-faure-bernard?pid=practice-788712&phs=true&page=1" class="floating-btn" target="_blank" rel="noopener">
             <span>📅</span>
@@ -696,11 +694,11 @@
         </a>
         <a href="tel:0650990938" class="floating-btn floating-btn-call">
             <span>📞</span>
-            <span>Alexandra</span>
+            <span>Appeler Alexandra (06 50 99 09 38)</span>
         </a>
         <a href="tel:0670445032" class="floating-btn floating-btn-call">
             <span>📞</span>
-            <span>Lucille</span>
+            <span>Appeler Lucille (06 70 44 50 32)</span>
         </a>
     </div>
 
