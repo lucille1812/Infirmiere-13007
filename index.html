@@ -9,7 +9,7 @@
     <!-- POLICES ELEGANTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SEO Local Data -->
     <script type="application/ld+json">
@@ -362,7 +362,7 @@
         }
 
         /* ===================================================
-           SYSTÈME FLOTTANT (ORDINATEUR + TABLETTE)
+           SYSTÈME FLOTTANT TRÈS GRAND & ULTRA VISIBLE (PC)
         =================================================== */
         .floating-action-container {
             position: fixed;
@@ -371,24 +371,24 @@
             z-index: 9999;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
             align-items: flex-end;
         }
 
         .floating-btn {
             background-color: var(--doctolib-blue);
             color: white;
-            padding: 16px 26px;
+            padding: 18px 30px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            font-weight: 800;
+            font-size: 1.3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid white;
+            border: 3px solid white;
             box-sizing: border-box;
         }
 
@@ -397,16 +397,20 @@
         }
 
         .floating-btn:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        .floating-btn .btn-icon {
+            font-size: 1.5rem;
         }
 
         /* ===================================================
-           SYSTÈME FLOTTANT (SMARTPHONE)
+           SYSTÈME FLOTTANT GÉANT & FACILE À CLIQUER (SMARTPHONE)
         =================================================== */
         @media (max-width: 950px) {
             body {
-                padding-bottom: 210px !important;
+                padding-bottom: 270px !important; /* Dégage un grand espace pour les 3 gros boutons */
             }
 
             .floating-action-container {
@@ -415,26 +419,29 @@
                 left: 0;
                 right: 0;
                 top: auto;
-                background: rgba(255, 255, 255, 0.96);
-                backdrop-filter: blur(12px);
-                -webkit-backdrop-filter: blur(12px);
-                border-top: 2px solid var(--terracotta-soft);
-                padding: 12px 16px 16px 16px;
+                background: #FFFFFF;
+                border-top: 3px solid var(--terracotta-soft);
+                padding: 12px 14px 20px 14px;
                 flex-direction: column;
                 align-items: stretch;
-                gap: 8px;
-                box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15);
+                gap: 10px;
+                box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.25);
             }
 
             .floating-btn {
                 width: 100%;
                 justify-content: center;
-                padding: 14px 18px;
-                border-radius: 14px;
-                font-size: 1.15rem;
-                font-weight: 700;
-                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+                padding: 18px 12px;
+                border-radius: 16px;
+                font-size: 1.3rem; /* Police très grande */
+                font-weight: 800;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                 border: none;
+                text-align: center;
+            }
+
+            .floating-btn .btn-icon {
+                font-size: 1.6rem;
             }
 
             .floating-btn-call {
@@ -668,15 +675,6 @@
             padding: 1.2rem 0;
         }
 
-        blockquote {
-            margin: 1rem 0;
-            padding: 0.9rem 1.3rem;
-            background-color: #F8EFEA;
-            border-left: 4px solid var(--terracotta-soft);
-            font-style: italic;
-            font-size: 1.1rem;
-        }
-
         footer {
             text-align: center;
             padding: 3.5rem 1.5rem 3rem;
@@ -702,15 +700,15 @@
     <!-- SYSTEME FLOTTANT ACCESSIBLE PARTOUT -->
     <div class="floating-action-container">
         <a href="https://www.doctolib.fr/cabinet-infirmier/marseille/cabinet-de-soins-infirmiers-faure-bernard?pid=practice-788712&phs=true&page=1" class="floating-btn" target="_blank" rel="noopener">
-            <span>📅</span>
+            <span class="btn-icon">📅</span>
             <span>Rendez-vous Doctolib</span>
         </a>
         <a href="tel:0650990938" class="floating-btn floating-btn-call">
-            <span>📞</span>
+            <span class="btn-icon">📞</span>
             <span>Appeler Alexandra (06 50 99 09 38)</span>
         </a>
         <a href="tel:0670445032" class="floating-btn floating-btn-call">
-            <span>📞</span>
+            <span class="btn-icon">📞</span>
             <span>Appeler Lucille (06 70 44 50 32)</span>
         </a>
     </div>
