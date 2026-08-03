@@ -305,6 +305,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .btn {
@@ -330,6 +331,104 @@
         .btn-doctolib { background-color: var(--doctolib-blue); color: white; }
         .btn-call { background-color: var(--terracotta-dark); color: white; }
 
+        /* BLOCS RASSURANCE & FAQ */
+        .info-box-container {
+            background-color: #F8EFEA;
+            border: 1px solid var(--terracotta-soft);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-box-container h3 {
+            font-family: var(--font-title);
+            color: var(--terracotta-dark);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .info-box-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .info-column ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-main);
+        }
+
+        .info-column ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* STYLES FAQ ACCORDÉON */
+        .faq-item {
+            border: 1px solid var(--sand-soft);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            background: #FAF5F0;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.2rem 1.5rem;
+            font-family: var(--font-title);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--terracotta-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--terracotta-dark);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.5rem;
+            background-color: #FFFFFF;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .faq-answer-content {
+            padding: 1.2rem 0;
+        }
+
+        blockquote {
+            margin: 1rem 0;
+            padding: 0.8rem 1.2rem;
+            background-color: #F8EFEA;
+            border-left: 4px solid var(--terracotta-soft);
+            font-style: italic;
+            font-size: 0.98rem;
+        }
+
+        @media (max-width: 950px) {
+            .info-box-grid { grid-template-columns: 1fr; gap: 1rem; }
+        }
+
         /* PERIMETRE & CARTES */
         .maps-grid {
             display: grid;
@@ -346,7 +445,7 @@
             .team-title { font-size: 2.5rem; }
             .intro-box h3 { font-size: 2.2rem; }
             .intro-box p { font-size: 1.15rem; }
-            .intro-box br { display: none; } /* Enleve les retours forces sur mobile */
+            .intro-box br { display: none; }
         }
 
         .map-box {
@@ -508,9 +607,9 @@
             </div>
         </div>
 
-        <!-- PRISE DE RENDEZ-VOUS -->
+        <!-- PRISE DE RENDEZ-VOUS & RASSURANCE -->
         <div class="card">
-            <h2>Prise de rendez-vous</h2>
+            <h2>Prise de rendez-vous & Modalités</h2>
             
             <div class="buttons-grid">
                 <a href="https://www.doctolib.fr/cabinet-infirmier/marseille/cabinet-de-soins-infirmiers-faure-bernard?pid=practice-788712&phs=true&page=1" class="btn btn-doctolib" target="_blank" rel="noopener">
@@ -524,6 +623,71 @@
                 <a href="tel:0670445032" class="btn btn-call">
                     Appeler Lucille : 06 70 44 50 32
                 </a>
+            </div>
+
+            <!-- INFORMATIONS PRATIQUES / TIERS PAYANT -->
+            <div class="info-box-container">
+                <h3>Informations Pratiques & Prise en charge</h3>
+                <div class="info-box-grid">
+                    <div class="info-column">
+                        <ul>
+                            <li><strong>Conventionnement :</strong> Infirmières diplômées d'État conventionnées par l'Assurance Maladie.</li>
+                            <li><strong>Tiers-Payant :</strong> Pratique du tiers-payant appliqué (pas d'avance de frais sur la part Sécurité Sociale, selon la réglementation).</li>
+                            <li><strong>Documents requis :</strong> Ordonnance médicale (si prescrite), Carte Vitale à jour et attestation de mutuelle.</li>
+                        </ul>
+                    </div>
+                    <div class="info-column">
+                        <ul>
+                            <li><strong>Continuité des soins :</strong> Interventions assurées 7j/7, à domicile ou au cabinet.</li>
+                            <li><strong>Matériel de soin :</strong> Pensez à récupérer le matériel prescrit en pharmacie avant notre premier passage.</li>
+                            <li><strong>Sorties d'hôpital :</strong> Anticipez votre appel de préférence 24h à 48h avant votre retour à domicile.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOIRE AUX QUESTIONS (FAQ) -->
+        <div class="card">
+            <h2>Questions Fréquentes (FAQ)</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">Je n'ai pas d'ordonnance médicale, puis-je tout de même bénéficier de soins infirmiers ?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Oui, c'est tout à fait possible.</strong></p>
+                        <p>L'exercice infirmier comprend une part d'autonomie appelée le <strong>« rôle propre »</strong>. Dans ce cadre, l'infirmier(e) est habilité(e) à évaluer vos besoins et dispenser des soins d'hygiène, de prévention, de conseil ou d'accompagnement de sa propre initiative.</p>
+                        
+                        <blockquote>
+                            « Relèvent du rôle propre de l'infirmier ou de l'infirmière les soins liés aux fonctions d'entretien et de continuité de la vie [...]. Dans ce cadre, l'infirmier ou l'infirmière a compétence pour prendre les initiatives et accomplir les soins qu'il juge nécessaires. »<br>
+                            <strong>— Article R. 4311-3 du Code de la Santé Publique</strong>
+                        </blockquote>
+
+                        <p><strong>À savoir concernant la prise en charge :</strong></p>
+                        <ul>
+                            <li><strong>Soins sans ordonnance / Hors nomenclature :</strong> Les prestations réalisées sans prescription médicale ou non inscrites à la nomenclature de la Sécurité Sociale restent entièrement réalisables, mais elles sont à la charge directe du patient (un devis ou tarif vous sera communiqué au préalable).</li>
+                            <li><strong>Soins sur ordonnance :</strong> Une prescription médicale préalable du médecin reste obligatoire pour les actes complexes (injections, pansements lourds, perfusions...) et pour bénéficier du remboursement par l'Assurance Maladie et votre mutuelle.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Comment organiser la sortie d'hospitalisation à domicile ?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Il vous suffit de nous contacter ou de réserver votre créneau dès que votre date de sortie est confirmée (idéalement 24 à 48h avant). Nous planifions ensemble l'heure du premier passage et les soins requis selon les directives du service hospitalier.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Intervenez-vous les dimanches et jours fériés ?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Oui, pour assurer la continuité des soins indispensable à votre santé, le cabinet assure des permanences et interventions à domicile 7 jours sur 7, y compris les dimanches et jours fériés sur rendez-vous.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -557,7 +721,7 @@
                     <div class="map-links-btns">
                         <div class="sector-caption">
                             <strong>Soins à domicile assurés sur :</strong><br>
-                            Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Samatan, Saint-Victor, Bompard, Roucas-Blanc) & arrondissements limitrophes.
+                            Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Samatan, Saint-Victor, Bompard, Roucas-Blanc, Malmousque, Vallon des Auffes) & arrondissements limitrophes.
                         </div>
                     </div>
                 </div>
@@ -579,5 +743,22 @@
         </p>
     </footer>
 
+    <!-- SCRIPT JS POUR INTERACTION FAQ -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const faqAnswer = button.nextElementSibling;
+
+                faqItem.classList.toggle('active');
+
+                if (faqItem.classList.contains('active')) {
+                    faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+                } else {
+                    faqAnswer.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
