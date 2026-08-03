@@ -204,9 +204,9 @@
             font-size: 1.45rem;
             line-height: 1.8;
             color: var(--text-main);
-            margin: 0;
-            max-width: 1300px;
             margin: 0 auto;
+            max-width: 1300px;
+            text-wrap: balance; /* Équilibre automatique des lignes */
         }
 
         /* CARTES INDIVIDUELLES PORTRAITS */
@@ -220,7 +220,7 @@
             background: #FFFFFF;
             border: 1px solid #F3EAED;
             border-radius: 20px;
-            padding: 2rem;
+            padding: 2rem 1.2rem; /* Légèrement réduit latéralement pour donner plus d'espace au texte */
             box-shadow: 0 6px 18px rgba(158, 90, 71, 0.04);
             text-align: center; 
             display: flex;
@@ -267,9 +267,11 @@
         .person-bio {
             font-size: 1.05rem;
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.65;
             margin: 0 0 1.5rem 0;
-            padding: 0 0.5rem;
+            padding: 0;
+            width: 100%;
+            text-wrap: balance; /* Équilibre élégant du texte sans saut forcé */
         }
 
         .specialties-title {
@@ -457,8 +459,7 @@
             <div class="intro-box">
                 <h3>Une équipe de proximité à votre service</h3>
                 <p>
-                    Installées dans le 7ème arrondissement de Marseille, nous assurons la continuité des soins 7j/7 à domicile ainsi qu'au cabinet.<br><br>
-                    Complémentaires et passionnées, nous mettons notre bienveillance et notre savoir-faire au service de votre santé et de votre confort au quotidien.
+                    Installées dans le 7ème arrondissement de Marseille, nous assurons la continuité des soins 7j/7 à domicile ainsi qu'au cabinet. Complémentaires et passionnées, nous mettons notre bienveillance et notre savoir-faire au service de votre santé et de votre confort au quotidien.
                 </p>
             </div>
 
@@ -473,7 +474,7 @@
                     <p class="person-role">Infirmière Diplômée d'État</p>
                     
                     <p class="person-bio">
-                        Riche d'un parcours en bloc opératoire notamment en chirurgie orthopédique, Alexandra apporte une grande rigueur dans la réalisation des&nbsp;soins post-opératoires, le suivi des actes techniques et la gestion des&nbsp;plaies&nbsp;complexes.
+                        Riche d'un parcours en bloc opératoire notamment en chirurgie orthopédique, Alexandra apporte une grande rigueur dans la réalisation des soins post-opératoires, le suivi des actes techniques et la gestion des plaies complexes.
                     </p>
 
                     <div class="specialties-title">Savoir-faire & Domaines d'intervention</div>
@@ -495,7 +496,7 @@
                     <p class="person-role">Infirmière Diplômée d'État</p>
                     
                     <p class="person-bio">
-                        Attentive et bienveillante, Lucille privilégie une prise en charge globale du&nbsp;patient. Elle est formée à l'accompagnement de l'endométriose ainsi qu'à&nbsp;la&nbsp;réalisation de bilans de prévention et de santé au quotidien.
+                        Attentive et bienveillante, Lucille privilégie une prise en charge globale du patient. Elle est formée à l'accompagnement de l'endométriose ainsi qu'à la réalisation de bilans de prévention et de santé au quotidien.
                     </p>
 
                     <div class="specialties-title">Savoir-faire & Domaines d'intervention</div>
