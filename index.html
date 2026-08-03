@@ -47,7 +47,7 @@
             --sand-soft: #EDE4DB;
             --text-main: #4A3E3D;
             --doctolib-blue: #0596DE;
-            --portrait-bg: #FBF6F0;
+            --portrait-bg: #FDF1E2; /* COULEUR MIS A JOUR */
             
             --font-title: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -159,7 +159,6 @@
             text-align: center;
         }
 
-        /* Titre "Notre Cabinet & Notre Équipe" plus grand */
         .team-title {
             font-size: 3.4rem;
         }
@@ -183,7 +182,7 @@
             display: block;
         }
 
-        /* TEXTE PRESENTATION (TAILLES AUGMENTÉES) */
+        /* TEXTE PRESENTATION */
         .intro-box {
             background-color: #F8EFEA;
             border: 1px solid var(--terracotta-soft);
@@ -229,9 +228,10 @@
             align-items: center;
         }
 
+        /* CADRE PHOTO AGRANDI À 540PX ET FOND #FDF1E2 */
         .person-photo-container {
             width: 100%;
-            height: 480px;
+            height: 540px; 
             border-radius: 16px;
             overflow: hidden;
             margin-bottom: 1.2rem;
@@ -261,8 +261,16 @@
             font-size: 1.3rem;
             font-style: italic;
             color: var(--text-main);
-            margin: 0 0 1.2rem 0;
+            margin: 0 0 1rem 0;
             opacity: 0.85;
+        }
+
+        .person-bio {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0 0 1.5rem 0;
+            padding: 0 0.5rem;
         }
 
         .specialties-title {
@@ -286,7 +294,7 @@
             background-color: #F8EFEA;
             color: var(--terracotta-dark);
             border: 1px solid var(--terracotta-soft);
-            padding: 0.4rem 0.95rem;
+            padding: 0.45rem 0.95rem;
             border-radius: 20px;
             font-size: 0.95rem;
             font-weight: 500;
@@ -349,7 +357,7 @@
             .duo-photos, .maps-grid { grid-template-columns: 1fr; }
             .container { padding: 1rem; }
             .main-photo-container { height: 350px; }
-            .person-photo-container { height: 380px; }
+            .person-photo-container { height: 420px; }
             .team-title { font-size: 2.5rem; }
             .intro-box h3 { font-size: 2.2rem; }
             .intro-box p { font-size: 1.2rem; }
@@ -456,6 +464,7 @@
 
             <!-- PHOTOS INDIVIDUELLES ET SPÉCIALITÉS -->
             <div class="duo-photos">
+                <!-- ALEXANDRA -->
                 <div class="person-card">
                     <div class="person-photo-container">
                         <img src="alexandra.png" alt="Alexandra Bernard - Infirmière D.E." class="person-photo">
@@ -463,15 +472,21 @@
                     <p class="person-name">Alexandra Bernard</p>
                     <p class="person-role">Infirmière Diplômée d'État</p>
                     
-                    <div class="specialties-title">Domaines d'expertise</div>
+                    <p class="person-bio">
+                        Riche d'un parcours en bloc opératoire notamment en chirurgie orthopédique, Alexandra apporte une grande rigueur dans la réalisation des soins post-opératoires, le suivi des actes techniques et la gestion des plaies complexes.
+                    </p>
+
+                    <div class="specialties-title">Savoir-faire & Domaines d'intervention</div>
                     <div class="specialties-tags">
-                        <span class="tag">Pansements complexes</span>
-                        <span class="tag">Suivi Diabète</span>
+                        <span class="tag">Chirurgie orthopédique & Soins post-opératoires</span>
+                        <span class="tag">Aide aux gestes techniques</span>
+                        <span class="tag">Pansements complexes & plaies</span>
                         <span class="tag">Perfusions & Injections</span>
-                        <span class="tag">Soins d'hygiène</span>
+                        <span class="tag">Soins d'hygiène & autonomie</span>
                     </div>
                 </div>
 
+                <!-- LUCILLE -->
                 <div class="person-card">
                     <div class="person-photo-container">
                         <img src="lucille.png" alt="Lucille Faure - Infirmière D.E." class="person-photo">
@@ -479,12 +494,18 @@
                     <p class="person-name">Lucille Faure</p>
                     <p class="person-role">Infirmière Diplômée d'État</p>
                     
-                    <div class="specialties-title">Domaines d'expertise</div>
+                    <p class="person-bio">
+                        Attentive et bienveillante, Lucille privilégie une prise en charge globale du patient. Elle est formée à l'accompagnement de l'endométriose ainsi qu'à la réalisation de bilans de prévention et de santé au quotidien.
+                    </p>
+
+                    <div class="specialties-title">Savoir-faire & Domaines d'intervention</div>
                     <div class="specialties-tags">
-                        <span class="tag">Oncologie & Chimiothérapie</span>
-                        <span class="tag">Soins Palliatifs</span>
-                        <span class="tag">Prélèvements sanguins</span>
-                        <span class="tag">Prise en charge douleur</span>
+                        <span class="tag">Accompagnement Endométriose</span>
+                        <span class="tag">Bilans de prévention & de santé</span>
+                        <span class="tag">Bilans de plaies & cicatrisation</span>
+                        <span class="tag">Soins & Suivi post-opératoire</span>
+                        <span class="tag">Pansements complexes</span>
+                        <span class="tag">Perfusions & Injections</span>
                     </div>
                 </div>
             </div>
