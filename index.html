@@ -9,7 +9,7 @@
     <!-- POLICES ELEGANTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- SEO Local Data -->
     <script type="application/ld+json">
@@ -300,10 +300,10 @@
             font-weight: 500;
         }
 
-        /* BOUTONS RENDEZ-VOUS */
+        /* BOUTONS RENDEZ-VOUS (Ajustés pour visibilité & contenance parfaite) */
         .buttons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
@@ -313,58 +313,62 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 1.2rem;
+            min-height: 65px;
+            padding: 1.3rem 1.5rem;
             text-align: center;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 1.05rem;
-            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 1.35;
+            border-radius: 35px;
             box-sizing: border-box;
             transition: all 0.3s ease;
+            white-space: normal;
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
         }
 
         .btn-doctolib { background-color: var(--doctolib-blue); color: white; }
         .btn-call { background-color: var(--terracotta-dark); color: white; }
 
-        /* BLOCS RASSURANCE & FAQ */
+        /* BLOC RASSURANCE (Une seule colonne, texte centré à gauche) */
         .info-box-container {
             background-color: #F8EFEA;
             border: 1px solid var(--terracotta-soft);
             border-radius: 16px;
-            padding: 2rem;
+            padding: 2.2rem 2.5rem;
             margin-top: 1.5rem;
         }
 
         .info-box-container h3 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 1.8rem;
+            font-size: 2.1rem;
             margin-top: 0;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
-        .info-box-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .info-column ul {
+        .info-single-column ul {
             margin: 0;
-            padding-left: 1.2rem;
-            font-size: 1.05rem;
-            line-height: 1.7;
+            padding-left: 1.5rem;
+            font-size: 1.15rem;
+            line-height: 1.8;
             color: var(--text-main);
+            text-align: left;
         }
 
-        .info-column ul li {
-            margin-bottom: 0.5rem;
+        .info-single-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .info-single-column ul li:last-child {
+            margin-bottom: 0;
         }
 
         /* STYLES FAQ ACCORDÉON */
@@ -383,7 +387,7 @@
             border: none;
             padding: 1.2rem 1.5rem;
             font-family: var(--font-title);
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 600;
             color: var(--terracotta-dark);
             cursor: pointer;
@@ -396,6 +400,7 @@
             content: '+';
             font-size: 1.5rem;
             color: var(--terracotta-dark);
+            margin-left: 10px;
         }
 
         .faq-item.active .faq-question::after {
@@ -425,10 +430,6 @@
             font-size: 0.98rem;
         }
 
-        @media (max-width: 950px) {
-            .info-box-grid { grid-template-columns: 1fr; gap: 1rem; }
-        }
-
         /* PERIMETRE & CARTES */
         .maps-grid {
             display: grid;
@@ -446,6 +447,9 @@
             .intro-box h3 { font-size: 2.2rem; }
             .intro-box p { font-size: 1.15rem; }
             .intro-box br { display: none; }
+            .info-box-container { padding: 1.5rem; }
+            .info-single-column ul { padding-left: 1.2rem; font-size: 1.05rem; }
+            .btn { font-size: 1.1rem; padding: 1rem; }
         }
 
         .map-box {
@@ -625,29 +629,60 @@
                 </a>
             </div>
 
-            <!-- INFORMATIONS PRATIQUES / TIERS PAYANT -->
+            <!-- INFORMATIONS PRATIQUES (Puces sur une seule colonne, aligné à gauche) -->
             <div class="info-box-container">
                 <h3>Informations Pratiques & Prise en charge</h3>
-                <div class="info-box-grid">
-                    <div class="info-column">
-                        <ul>
-                            <li><strong>Conventionnement :</strong> Infirmières diplômées d'État conventionnées par l'Assurance Maladie.</li>
-                            <li><strong>Tiers-Payant :</strong> Pratique du tiers-payant appliqué (pas d'avance de frais sur la part Sécurité Sociale, selon la réglementation).</li>
-                            <li><strong>Documents requis :</strong> Ordonnance médicale (si prescrite), Carte Vitale à jour et attestation de mutuelle.</li>
-                        </ul>
+                <div class="info-single-column">
+                    <ul>
+                        <li><strong>Conventionnement :</strong> Infirmières diplômées d'État conventionnées par l'Assurance Maladie.</li>
+                        <li><strong>Tiers-Payant :</strong> Pratique du tiers-payant appliqué (pas d'avance de frais sur la part Sécurité Sociale, selon la réglementation).</li>
+                        <li><strong>Documents requis :</strong> Ordonnance médicale (si prescrite), Carte Vitale à jour et attestation de mutuelle.</li>
+                        <li><strong>Continuité des soins :</strong> Interventions assurées 7j/7, à domicile ou au cabinet.</li>
+                        <li><strong>Matériel de soin :</strong> Pensez à récupérer le matériel prescrit en pharmacie avant notre premier passage.</li>
+                        <li><strong>Sorties d'hôpital :</strong> Anticipez votre appel de préférence 24h à 48h avant votre retour à domicile.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFORMATIONS PRATIQUES & CARTES -->
+        <div class="card">
+            <h2>Nos Cabinets & Périmètre d'Intervention</h2>
+
+            <ul class="info-list">
+                <li><strong>Cabinet Corderie :</strong> 67 Boulevard de la Corderie, 13007 Marseille</li>
+                <li><strong>Cabinet Endoume :</strong> 255 Rue d'Endoume, 13007 Marseille</li>
+                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur RDV (Pansements, perfusions, injections, etc.).</li>
+            </ul>
+
+            <div class="maps-grid">
+                <div class="map-box">
+                    <div class="map-box-title">Emplacement des Cabinets</div>
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Marseille%207e%20Endoume%20Corderie&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="map-links-btns">
+                        <a href="https://www.google.com/maps/search/?api=1&query=67+Boulevard+de+la+Corderie+13007+Marseille" target="_blank" class="btn-map" rel="noopener">GPS Cabinet Corderie</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=255+Rue+d+Endoume+13007+Marseille" target="_blank" class="btn-map" rel="noopener">GPS Cabinet Endoume</a>
                     </div>
-                    <div class="info-column">
-                        <ul>
-                            <li><strong>Continuité des soins :</strong> Interventions assurées 7j/7, à domicile ou au cabinet.</li>
-                            <li><strong>Matériel de soin :</strong> Pensez à récupérer le matériel prescrit en pharmacie avant notre premier passage.</li>
-                            <li><strong>Sorties d'hôpital :</strong> Anticipez votre appel de préférence 24h à 48h avant votre retour à domicile.</li>
-                        </ul>
+                </div>
+
+                <div class="map-box">
+                    <div class="map-box-title">Périmètre d'intervention à domicile</div>
+                    <img src="zone-intervention.png" alt="Zone d'intervention soins infirmiers à domicile Marseille 7ème">
+                    <div class="map-links-btns">
+                        <div class="sector-caption">
+                            <strong>Soins à domicile assurés sur :</strong><br>
+                            Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Samatan, Saint-Victor, Bompard, Roucas-Blanc, Malmousque, Vallon des Auffes) & arrondissements limitrophes.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- FOIRE AUX QUESTIONS (FAQ) -->
+        <!-- FOIRE AUX QUESTIONS (FAQ) - PLACÉ EN DERNIER DESSOUS LES CARTES -->
         <div class="card">
             <h2>Questions Fréquentes (FAQ)</h2>
 
@@ -686,43 +721,6 @@
                 <div class="faq-answer">
                     <div class="faq-answer-content">
                         <p>Oui, pour assurer la continuité des soins indispensable à votre santé, le cabinet assure des permanences et interventions à domicile 7 jours sur 7, y compris les dimanches et jours fériés sur rendez-vous.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- INFORMATIONS PRATIQUES & CARTES -->
-        <div class="card">
-            <h2>Nos Cabinets & Périmètre d'Intervention</h2>
-
-            <ul class="info-list">
-                <li><strong>Cabinet Corderie :</strong> 67 Boulevard de la Corderie, 13007 Marseille</li>
-                <li><strong>Cabinet Endoume :</strong> 255 Rue d'Endoume, 13007 Marseille</li>
-                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur RDV (Pansements, perfusions, injections, etc.).</li>
-            </ul>
-
-            <div class="maps-grid">
-                <div class="map-box">
-                    <div class="map-box-title">Emplacement des Cabinets</div>
-                    <iframe 
-                        src="https://maps.google.com/maps?q=Marseille%207e%20Endoume%20Corderie&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                    <div class="map-links-btns">
-                        <a href="https://www.google.com/maps/search/?api=1&query=67+Boulevard+de+la+Corderie+13007+Marseille" target="_blank" class="btn-map" rel="noopener">GPS Cabinet Corderie</a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=255+Rue+d+Endoume+13007+Marseille" target="_blank" class="btn-map" rel="noopener">GPS Cabinet Endoume</a>
-                    </div>
-                </div>
-
-                <div class="map-box">
-                    <div class="map-box-title">Périmètre d'intervention à domicile</div>
-                    <img src="zone-intervention.png" alt="Zone d'intervention soins infirmiers à domicile Marseille 7ème">
-                    <div class="map-links-btns">
-                        <div class="sector-caption">
-                            <strong>Soins à domicile assurés sur :</strong><br>
-                            Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Samatan, Saint-Victor, Bompard, Roucas-Blanc, Malmousque, Vallon des Auffes) & arrondissements limitrophes.
-                        </div>
                     </div>
                 </div>
             </div>
