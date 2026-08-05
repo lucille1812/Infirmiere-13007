@@ -3,330 +3,993 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet d'Infirmières Libérales Marseille 7 - Alexandra Bernard & Lucille Faure</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Cabinet d'Infirmières Libérales 13007 - Alexandra Bernard & Lucille Faure</title>
+    <meta name="description" content="Cabinet d'infirmières libérales au 255 Rue d'Endoume et 67 Bd de la Corderie, Marseille 7ème. Soins à domicile dans le 13007 et arrondissements limitrophes.">
+    
+    <!-- POLICES ELEGANTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO Local Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Cabinet d'Infirmières Libérales Bernard & Faure",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "67 Boulevard de la Corderie",
+          "addressLocality": "Marseille",
+          "postalCode": "13007",
+          "addressCountry": "FR"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "255 Rue d'Endoume",
+          "addressLocality": "Marseille",
+          "postalCode": "13007",
+          "addressCountry": "FR"
+        }
+      ],
+      "telephone": ["0650990938", "0670445032"],
+      "medicalSpecialty": "Nursing"
+    }
+    </script>
+
     <style>
         :root {
             --bg-body: #FAF5F0;
             --card-bg: #FFFFFF;
             --terracotta-dark: #9E5A47;
             --terracotta-soft: #D99B82;
+            --sand-soft: #EDE4DB;
             --text-main: #4A3E3D;
-            --text-muted: #7A6B69;
+            --doctolib-blue: #0596DE;
+            --portrait-bg: #FDF1E2;
+            
             --font-title: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
             font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
             background-color: var(--bg-body);
             color: var(--text-main);
-            line-height: 1.6;
-            padding: 2rem 1rem;
+            line-height: 1.65;
+            font-size: 1.15rem;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        /* HEADER & LOGO */
+        /* BANNIÈRE HAUT */
         header {
+            background-color: #FBEEE5;
+            border-bottom: 1px solid var(--sand-soft);
+            width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            max-width: 1700px;
+            width: 100%;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .header-logo {
+            height: 480px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            mix-blend-mode: multiply;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            margin-bottom: 2.5rem;
         }
 
-        .logo {
-            max-width: 180px;
-            height: auto;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
+        .header-title {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2.5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 4rem;
+            margin: 0 0 0.4rem 0;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            line-height: 1.1;
         }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            font-weight: 500;
+        .header-sub {
+            font-family: var(--font-title);
+            color: var(--terracotta-dark);
+            font-size: 2.2rem;
+            font-style: italic;
+            letter-spacing: 1px;
+            margin: 0;
+            opacity: 0.95;
         }
 
-        /* SECTIONS / CARDS */
+        /* CONTENEUR PRINCIPAL */
+        .container {
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            box-sizing: border-box;
+        }
+
         .card {
             background: var(--card-bg);
             border-radius: 20px;
             padding: 2.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid #F3EAED;
+            margin-bottom: 2.5rem;
             box-shadow: 0 10px 30px rgba(158, 90, 71, 0.04);
+            border: 1px solid #F3EAED;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         h2 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-bottom: 1.8rem;
+            font-weight: 600;
             text-align: center;
         }
 
-        /* PROTOCOLE APPPEL */
-        .protocol-box {
-            background-color: #FDF9F6;
-            border-left: 4px solid var(--terracotta-soft);
-            padding: 1.5rem;
-            border-radius: 0 12px 12px 0;
-            margin-bottom: 1.5rem;
+        .team-title {
+            font-size: 3.6rem;
         }
 
-        .protocol-box p {
-            margin-bottom: 0.8rem;
+        /* BANNIÈRE PAYSAGE GROUPE */
+        .main-photo-container {
+            width: 100%;
+            height: 600px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 20px rgba(158, 90, 71, 0.08);
+            background-color: #FAF5F0;
         }
 
-        .protocol-box p:last-child {
-            margin-bottom: 0;
+        .main-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+            display: block;
         }
 
-        /* PHOTO D'ÉQUIPE & INFIRMIÈRES */
-        .team-photo-container {
+        /* TEXTE PRESENTATION */
+        .intro-box {
+            background-color: #F8EFEA;
+            border: 1px solid var(--terracotta-soft);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
             text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .intro-box h3 {
+            font-family: var(--font-title);
+            color: var(--terracotta-dark);
+            font-size: 3.2rem;
+            margin: 0 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .intro-box p {
+            font-size: 1.45rem;
+            line-height: 1.7;
+            color: var(--text-main);
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .intro-box .key-points {
+            margin-top: 1.2rem;
+            font-weight: 600;
+            color: var(--terracotta-dark);
+            font-size: 1.35rem;
+        }
+
+        /* CARTES INDIVIDUELLES PORTRAITS */
+        .duo-photos { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 3rem; 
+            width: 100%;
+        }
+
+        .person-card { 
+            background: #FFFFFF;
+            border: 1px solid #F3EAED;
+            border-radius: 24px;
+            padding: 3rem 3rem; 
+            box-shadow: 0 6px 20px rgba(158, 90, 71, 0.05);
+            text-align: center; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .person-photo-container {
+            width: 100%;
+            height: 560px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 1.8rem;
+            background-color: var(--portrait-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .person-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .person-name {
+            font-family: var(--font-title);
+            font-weight: 600;
+            color: var(--terracotta-dark);
+            margin: 0.2rem 0 0 0;
+            font-size: 2.8rem;
+        }
+
+        .person-role {
+            font-family: var(--font-title);
+            font-size: 1.85rem;
+            font-style: italic;
+            color: var(--text-main);
+            margin: 0 0 1.5rem 0;
+            opacity: 0.85;
+        }
+
+        .person-bio {
+            font-size: 1.6rem;
+            color: var(--text-main);
+            line-height: 1.75;
+            margin: 0 0 2rem 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* TITRES STYLE SAVOIR-FAIRE */
+        .specialties-title {
+            font-family: var(--font-title);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--terracotta-dark);
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .specialties-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .tag {
+            background-color: #F8EFEA;
+            color: var(--terracotta-dark);
+            border: 1px solid var(--terracotta-soft);
+            padding: 0.75rem 1.35rem;
+            border-radius: 26px;
+            font-size: 1.45rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* BOUTONS RENDEZ-VOUS SUR LA PAGE */
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
-        .team-photo {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 75px;
+            padding: 0.9rem 1.2rem;
+            text-align: center;
+            text-decoration: none;
+            line-height: 1.3;
+            border-radius: 38px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            white-space: normal;
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
-        .nurses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .btn-doctolib { 
+            background-color: var(--doctolib-blue); 
+            color: white; 
+            font-weight: 600;
+            font-size: 1.35rem;
+        }
+
+        .btn-call { 
+            background-color: var(--terracotta-dark); 
+            color: white; 
+        }
+
+        .btn-call strong {
+            font-size: 1.35rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .btn-call small {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        /* SYSTEME FLOTTANT (PC & MOBILE) */
+        .floating-action-container {
+            position: fixed;
+            right: 25px;
+            bottom: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .floating-btn {
+            background-color: var(--doctolib-blue);
+            color: white;
+            padding: 18px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid white;
+            box-sizing: border-box;
+        }
+
+        .floating-btn-call {
+            background-color: var(--terracotta-dark);
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        .floating-btn .btn-icon {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 950px) {
+            body {
+                padding-bottom: 270px !important;
+            }
+
+            .floating-action-container {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: auto;
+                background: #FFFFFF;
+                border-top: 3px solid var(--terracotta-soft);
+                padding: 12px 14px 20px 14px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+                box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.25);
+            }
+
+            .floating-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 18px 12px;
+                border-radius: 16px;
+                font-size: 1.3rem;
+                font-weight: 800;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                border: none;
+                text-align: center;
+            }
+
+            .floating-btn .btn-icon {
+                font-size: 1.6rem;
+            }
+
+            .floating-btn-call {
+                display: flex !important;
+            }
+
+            .duo-photos, .maps-grid { grid-template-columns: 1fr; }
+            .container { padding: 1rem; }
+            .card { padding: 1.5rem; }
+            .person-card { padding: 2rem 1.2rem; }
+            .main-photo-container { height: 350px; }
+            .person-photo-container { height: 420px; }
+            .person-name { font-size: 2.2rem; }
+            .person-role { font-size: 1.4rem; }
+            .person-bio { font-size: 1.25rem; }
+            .specialties-title { font-size: 1.35rem; }
+            .tag { font-size: 1.15rem; }
+            .team-title { font-size: 2.7rem; }
+            .intro-box h3 { font-size: 2.4rem; }
+            .intro-box p { font-size: 1.25rem; }
+            .intro-box br { display: none; }
+            .info-box-container { padding: 1.5rem; }
+            .info-box-container h3 { font-size: 2.1rem; }
+            .info-single-column ul { padding-left: 1.2rem; font-size: 1.25rem; }
+            .info-list li { font-size: 1.35rem; }
+            .map-box-title, .sector-caption { font-size: 1.35rem; }
+            .btn-doctolib { font-size: 1.2rem; }
+            .btn-call strong { font-size: 1.2rem; }
+            .btn-call small { font-size: 1.05rem; }
+            .header-container { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+            .header-title { font-size: 2.7rem; }
+            .header-sub { font-size: 1.4rem; }
+            .header-logo { height: 300px; }
+        }
+
+        /* BLOCS RASSURANCE & INFOS */
+        .info-box-container {
+            background-color: #F8EFEA;
+            border: 1px solid var(--terracotta-soft);
+            border-radius: 16px;
+            padding: 2.5rem 3rem;
             margin-top: 1.5rem;
         }
 
-        .nurse-card {
-            background: #FAF5F0;
-            padding: 1.5rem;
-            border-radius: 12px;
+        .info-box-container h3 {
+            font-family: var(--font-title);
+            color: var(--terracotta-dark);
+            font-size: 2.6rem;
+            margin-top: 0;
+            margin-bottom: 1.8rem;
             text-align: center;
         }
 
-        .nurse-card h3 {
-            font-family: var(--font-title);
-            color: var(--terracotta-dark);
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .phone-link {
-            display: inline-block;
-            margin-top: 0.8rem;
-            color: var(--terracotta-dark);
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-
-        .phone-link:hover {
-            text-decoration: underline;
-        }
-
-        /* CABINETS GRID */
-        .cabinets-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .cabinet-item {
-            border: 1px solid #F3EAED;
-            padding: 1.5rem;
-            border-radius: 12px;
-            background: #FAF5F0;
-        }
-
-        .cabinet-item h3 {
-            font-family: var(--font-title);
-            color: var(--terracotta-dark);
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* SOINS LIST */
-        .care-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .care-list li {
-            position: relative;
+        .info-single-column ul {
+            margin: 0;
             padding-left: 1.8rem;
+            font-size: 1.6rem;
+            line-height: 1.8;
+            color: var(--text-main);
+            text-align: left;
         }
 
-        .care-list li::before {
-            content: "•";
-            color: var(--terracotta-soft);
-            font-size: 1.8rem;
-            position: absolute;
-            left: 0;
-            top: -5px;
+        .info-single-column ul li {
+            margin-bottom: 1.2rem;
         }
 
-        /* DOCTOLIB BUTTON */
-        .doctolib-container {
-            text-align: center;
-            margin-top: 2rem;
+        .info-single-column ul li:last-child {
+            margin-bottom: 0;
         }
 
-        .btn-doctolib {
-            display: inline-block;
-            background-color: var(--terracotta-dark);
-            color: #FFFFFF;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
+        /* SECTION CABINETS ET PERIMETRE */
+        .info-list { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0 0 2rem 0; 
+        }
+
+        .info-list li { 
+            padding: 1rem 0; 
+            border-bottom: 1px solid #FAF5F0; 
+            font-size: 1.75rem; 
+            font-family: var(--font-title);
+            color: var(--text-main);
+        }
+
+        .info-list li strong { 
+            color: var(--terracotta-dark); 
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .btn-doctolib:hover {
-            background-color: #834837;
+        .info-list li:last-child { 
+            border-bottom: none; 
         }
 
-        /* FOOTER */
+        /* PERIMETRE & CARTES */
+        .maps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.8rem;
+        }
+
+        .map-box {
+            background: #FAF5F0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #EDE4DB;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-box-title {
+            font-family: var(--font-title);
+            background-color: #F8EFEA;
+            color: var(--terracotta-dark);
+            font-weight: 600;
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1.2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #EDE4DB;
+        }
+
+        .map-box iframe, .map-box img {
+            width: 100%;
+            height: 420px;
+            border: 0;
+            object-fit: cover;
+            display: block;
+        }
+
+        .map-links-btns {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            background-color: var(--card-bg);
+            margin-top: auto;
+        }
+
+        .btn-map {
+            background-color: white;
+            border: 1px solid var(--terracotta-soft);
+            color: var(--terracotta-dark);
+            padding: 0.8rem;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .sector-caption {
+            font-size: 1.75rem;
+            font-family: var(--font-title);
+            text-align: center;
+            color: var(--text-main);
+            padding: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .sector-caption strong {
+            color: var(--terracotta-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sector-description {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            text-transform: none;
+            margin-top: 0.6rem;
+            display: block;
+            line-height: 1.6;
+        }
+
+        /* STYLES FAQ ACCORDÉON */
+        .faq-item {
+            border: 1px solid var(--sand-soft);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            background: #FAF5F0;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.3rem 1.6rem;
+            font-family: var(--font-title);
+            font-size: 1.55rem;
+            font-weight: 600;
+            color: var(--terracotta-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.6rem;
+            color: var(--terracotta-dark);
+            margin-left: 10px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.6rem;
+            background-color: #FFFFFF;
+            font-size: 1.18rem;
+            line-height: 1.75;
+        }
+
+        .faq-answer-content {
+            padding: 1.2rem 0;
+        }
+
+        /* PIED DE PAGE EPURÉ & RÉGLEMENTAIRE */
         footer {
             text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #EAE0DA;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            padding: 3.5rem 1.5rem 3rem;
+            font-size: 1rem;
+            color: var(--text-main);
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        footer a {
+        .emergency-notice {
+            font-size: 1.15rem;
             color: var(--terracotta-dark);
-            text-decoration: none;
-            margin: 0 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .legal-notice { 
+            font-size: 0.95rem; 
+            line-height: 1.7; 
+            margin-bottom: 1.2rem; 
+            color: #6E5E5C; 
+            font-style: italic; 
         }
 
         .legal-links {
-            margin-top: 0.8rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .legal-links a {
+            color: var(--terracotta-dark);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 8px;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-divider { 
+            border: 0; 
+            height: 1px; 
+            background-color: #DCD0C5; 
+            width: 40%; 
+            margin: 1.5rem auto; 
+        }
+
+        .copyright { 
+            font-family: var(--font-title); 
+            font-size: 1.3rem; 
+            color: var(--terracotta-dark); 
+            margin: 0; 
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- HEADER -->
-        <header>
-            <img src="Logo.or.png" alt="Logo Cabinet d'Infirmières" class="logo">
-            <h1>Cabinet d'Infirmières Libérales</h1>
-            <p class="subtitle">Alexandra Bernard & Lucille Faure — Marseille 7ème</p>
-        </header>
-
-        <!-- SECTION CONTACT & CONSIGNES -->
-        <section class="card">
-            <h2>Prise de Rendez-vous & Urgences</h2>
-            
-            <div class="protocol-box">
-                <p><strong>📞 Consignes pour le contact téléphonique :</strong></p>
-                <p>En raison des soins dispensés tout au long de la journée, nous ne sommes pas toujours en mesure de répondre immédiatement à vos appels.</p>
-                <p><strong>Merci de nous laisser un message vocal explicite</strong> avec vos nom, prénom, numéro de téléphone et l'objet de votre demande afin que nous puissions vous rappeler au plus vite.</p>
-            </div>
-
-            <div class="nurses-grid">
-                <div class="nurse-card">
-                    <h3>Alexandra Bernard</h3>
-                    <p>Infirmière Diplômée d'État</p>
-                    <a href="tel:0650990938" class="phone-link">📞 06 50 99 09 38</a>
-                </div>
-                <div class="nurse-card">
-                    <h3>Lucille Faure</h3>
-                    <p>Infirmière Diplômée d'État</p>
-                    <a href="tel:0670445032" class="phone-link">📞 06 70 44 50 32</a>
-                </div>
-            </div>
-
-            <div class="doctolib-container">
-                <a href="https://www.doctolib.fr" target="_blank" rel="noopener noreferrer" class="btn-doctolib">
-                    Prendre rendez-vous sur Doctolib
-                </a>
-            </div>
-        </section>
-
-        <!-- SECTION ÉQUIPE -->
-        <section class="card">
-            <h2>Vos Infirmières</h2>
-            <div class="team-photo-container">
-                <img src="photo-groupe.PNG" alt="Alexandra Bernard et Lucille Faure" class="team-photo">
-            </div>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto;">
-                Infirmières libérales conventionnées, nous assurons la continuité des soins à domicile 7J/7 ainsi que sur rendez-vous à nos cabinets situés dans le 7ème arrondissement de Marseille.
-            </p>
-        </section>
-
-        <!-- SECTION NOS CABINETS -->
-        <section class="card">
-            <h2>Nos Adresses à Marseille (13007)</h2>
-            <div class="cabinets-grid">
-                <div class="cabinet-item">
-                    <h3>Cabinet Corderie</h3>
-                    <p>67 Boulevard de la Corderie</p>
-                    <p>13007 Marseille</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Sur rendez-vous uniquement</p>
-                </div>
-                <div class="cabinet-item">
-                    <h3>Cabinet Endoume</h3>
-                    <p>255 Rue d'Endoume</p>
-                    <p>13007 Marseille</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Sur rendez-vous uniquement</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION SOINS -->
-        <section class="card">
-            <h2>Soins Dispensés</h2>
-            <ul class="care-list">
-                <li>Pansements simples et complexes</li>
-                <li>Injections et perfusions</li>
-                <li>Prélèvements sanguins</li>
-                <li>Suivi du diabète (glycémie, insuline)</li>
-                <li>Aide au maintien à domicile</li>
-                <li>Distribution et préparation des traitements</li>
-                <li>Soins d'hygiène et de confort</li>
-                <li>Suivi post-opératoire</li>
-            </ul>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <p>&copy; Cabinet d'Infirmières Libérales Alexandra Bernard & Lucille Faure. Tous droits réservés.</p>
-            <p class="legal-links">
-                <a href="mentions-legales.html">Mentions légales</a> | <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-            </p>
-        </footer>
+    <!-- SYSTEME FLOTTANT ACCESSIBLE PARTOUT -->
+    <div class="floating-action-container">
+        <a href="https://www.doctolib.fr/cabinet-infirmier/marseille/cabinet-de-soins-infirmiers-faure-bernard?pid=practice-788712&phs=true&page=1" class="floating-btn" target="_blank" rel="noopener">
+            <span class="btn-icon">📅</span>
+            <span>Rendez-vous Doctolib</span>
+        </a>
+        <a href="tel:0650990938" class="floating-btn floating-btn-call">
+            <span class="btn-icon">📞</span>
+            <span>Appeler Alexandra (06 50 99 09 38)</span>
+        </a>
+        <a href="tel:0670445032" class="floating-btn floating-btn-call">
+            <span class="btn-icon">📞</span>
+            <span>Appeler Lucille (06 70 44 50 32)</span>
+        </a>
     </div>
 
+    <header>
+        <div class="header-container">
+            <img src="Logo.or.png" alt="Logo Cabinet Infirmier" class="header-logo">
+            <div class="header-text">
+                <h1 class="header-title">INFIRMIÈRES À DOMICILE</h1>
+                <p class="header-sub">Soins à Domicile & au Cabinet — Marseille 7e</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECTION ÉQUIPE -->
+        <div class="card">
+            <h2 class="team-title">Notre Cabinet & Notre Équipe</h2>
+            
+            <!-- PHOTO DE GROUPE PAYSAGE -->
+            <div class="main-photo-container">
+                <img src="photo-groupe.PNG" alt="Alexandra Bernard et Lucille Faure - Infirmières Libérales Marseille 7" class="main-photo">
+            </div>
+
+            <!-- ENCADRÉ PRÉSENTATION -->
+            <div class="intro-box">
+                <h3>Une équipe de proximité à votre service</h3>
+                <p>
+                    Complémentaires et passionnées, nous mettons notre bienveillance et notre savoir-faire<br>
+                    au service de votre santé et de votre confort au quotidien.<br>
+                    Installées dans le 7ème arrondissement de Marseille, nous assurons la continuité des soins<br>
+                    7j/7 à domicile ainsi qu'au cabinet.
+                </p>
+                <p class="key-points">• Tiers payant • Accès PMR • Sorties d’hospitalisation</p>
+            </div>
+
+            <!-- PHOTOS INDIVIDUELLES ET SPÉCIALITÉS -->
+            <div class="duo-photos">
+                <!-- ALEXANDRA -->
+                <div class="person-card">
+                    <div class="person-photo-container">
+                        <img src="alexandra.png" alt="Alexandra Bernard - Infirmière D.E." class="person-photo">
+                    </div>
+                    <p class="person-name">Alexandra Bernard</p>
+                    <p class="person-role">Infirmière Diplômée d'État</p>
+                    
+                    <p class="person-bio">
+                        Riche d'un parcours en bloc opératoire notamment en chirurgie&nbsp;orthopédique, Alexandra apporte une&nbsp;grande rigueur dans la réalisation des soins post-opératoires, le suivi des actes techniques et la&nbsp;gestion des plaies complexes.
+                    </p>
+
+                    <div class="specialties-title">Savoir-faire & Domaines d'intervention</div>
+                    <div class="specialties-tags">
+                        <span class="tag">Chirurgie orthopédique & Soins post-opératoires</span>
+                        <span class="tag">Aide aux gestes techniques</span>
+                        <span class="tag">Pansements complexes & plaies</span>
+                        <span class="tag">Perfusions & Injections</span>
+                        <span class="tag">Soins d'hygiène & autonomie</span>
+                    </div>
+                </div>
+
+                <!-- LUCILLE -->
+                <div class="person-card">
+                    <div class="person-photo-container">
+                        <img src="lucille.png" alt="Lucille Faure - Infirmière D.E." class="person-photo">
+                    </div>
+                    <p class="person-name">Lucille Faure</p>
+                    <p class="person-role">Infirmière Diplômée d'État</p>
+                    
+                    <p class="person-bio">
+                        Attentive et bienveillante, Lucille privilégie une&nbsp;prise&nbsp;en&nbsp;charge&nbsp;globale&nbsp;du&nbsp;patient. Elle est formée à&nbsp;l'accompagnement de l'endométriose ainsi qu'à la&nbsp;réalisation&nbsp;de&nbsp;bilans&nbsp;de prévention et de santé au quotidien.
+                    </p>
+
+                    <div class="specialties-title">Savoir-faire & Domaines d'intervention</div>
+                    <div class="specialties-tags">
+                        <span class="tag">Accompagnement Endométriose</span>
+                        <span class="tag">Soins d'hygiène & autonomie</span>
+                        <span class="tag">Bilans de plaies & cicatrisation</span>
+                        <span class="tag">Soins & Suivi post-opératoire</span>
+                        <span class="tag">Pansements complexes</span>
+                        <span class="tag">Perfusions & Injections</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRISE DE RENDEZ-VOUS & RASSURANCE -->
+        <div class="card">
+            <h2>Prise de rendez-vous & Modalités</h2>
+            
+            <div class="buttons-grid">
+                <a href="https://www.doctolib.fr/cabinet-infirmier/marseille/cabinet-de-soins-infirmiers-faure-bernard?pid=practice-788712&phs=true&page=1" class="btn btn-doctolib" target="_blank" rel="noopener">
+                    Prendre RDV sur Doctolib
+                </a>
+                
+                <a href="tel:0650990938" class="btn btn-call">
+                    <span><strong>Appeler Alexandra</strong><br><small>06 50 99 09 38</small></span>
+                </a>
+
+                <a href="tel:0670445032" class="btn btn-call">
+                    <span><strong>Appeler Lucille</strong><br><small>06 70 44 50 32</small></span>
+                </a>
+            </div>
+
+            <!-- BLOC 1 : INFORMATIONS PRATIQUES -->
+            <div class="info-box-container">
+                <h3>Informations Pratiques & Prise en charge</h3>
+                <div class="info-single-column">
+                    <ul>
+                        <li><strong>Conventionnement :</strong> Infirmières diplômées d'État conventionnées par l'Assurance Maladie.</li>
+                        <li><strong>Tiers-Payant :</strong> Pratique du tiers-payant appliqué (pas d'avance de frais sur la part Sécurité Sociale, selon&nbsp;la&nbsp;réglementation).</li>
+                        <li><strong>Documents requis :</strong> Ordonnance médicale (si prescrite), Carte Vitale à jour et attestation de mutuelle.</li>
+                        <li><strong>Continuité des soins :</strong> Interventions assurées 7j/7, à domicile ou au cabinet.</li>
+                        <li><strong>Matériel de soin :</strong> Pensez à récupérer le matériel prescrit en pharmacie avant notre premier passage.</li>
+                        <li><strong>Sorties d'hôpital :</strong> Anticipez votre appel de préférence 24h à 48h avant votre retour à domicile.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BLOC 2 : ACCESSIBILITÉ PMR & MOYENS DE PAIEMENT -->
+            <div class="info-box-container">
+                <h3>Accessibilité PMR & Moyens de paiement</h3>
+                <div class="info-single-column">
+                    <ul>
+                        <li>
+                            <strong>Accessibilité PMR :</strong> 
+                            Nos deux cabinets sont situés de plain-pied en rez-de-chaussée (sans marche ni ascenseur).
+                            <br>
+                            <em>• Cabinet Corderie :</em> Équipé d'une table d'examen réglable en hauteur, particulièrement adaptée à l'accueil des&nbsp;personnes à mobilité réduite ou nécessitant une aide au transfert.
+                            <br>
+                            <em>• Cabinet Endoume :</em> Équipé d'une table d'examen fixe (privilégié pour les soins aux personnes autonomes dans&nbsp;leurs déplacements).
+                        </li>
+                        <li>
+                            <strong>Moyens de paiement acceptés :</strong> 
+                            Pour les actes hors nomenclature (soins réalisés sans ordonnance) ou&nbsp;la&nbsp;part&nbsp;restant à votre charge, le cabinet accepte les espèces et les virements bancaires.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFORMATIONS PRATIQUES & CARTES -->
+        <div class="card">
+            <h2>Nos Cabinets & Périmètre d'Intervention</h2>
+
+            <ul class="info-list">
+                <li><strong>Cabinet Corderie :</strong> 67 Boulevard de la Corderie, 13007 Marseille</li>
+                <li><strong>Cabinet Endoume :</strong> 255 Rue d'Endoume, 13007 Marseille</li>
+                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur RDV (pansements, perfusions, injections, etc.).</li>
+            </ul>
+
+            <div class="maps-grid">
+                <div class="map-box">
+                    <div class="map-box-title">Emplacement des Cabinets</div>
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Marseille%207e%20Endoume%20Corderie&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="map-links-btns">
+                        <a href="https://www.google.com/maps/search/?api=1&query=67+Boulevard+de+la+Corderie+13007+Marseille" target="_blank" class="btn-map" rel="noopener">📍 GPS Cabinet Corderie</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=255+Rue+d+Endoume+13007+Marseille" target="_blank" class="btn-map" rel="noopener">📍 GPS Cabinet Endoume</a>
+                    </div>
+                </div>
+
+                <div class="map-box">
+                    <div class="map-box-title">Périmètre d'intervention à domicile</div>
+                    <img src="zone-intervention.png" alt="Zone d'intervention soins infirmiers à domicile Marseille 7ème">
+                    <div class="map-links-btns">
+                        <div class="sector-caption">
+                            <strong>Soins à domicile assurés sur :</strong>
+                            <span class="sector-description">
+                                Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Samatan, Saint-Victor, Bompard, Roucas-Blanc, Malmousque, Vallon des Auffes) &&nbsp;arrondissements limitrophes.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOIRE AUX QUESTIONS (FAQ) -->
+        <div class="card">
+            <h2>Questions Fréquentes (FAQ)</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">Je n'ai pas d'ordonnance médicale, puis-je tout de même bénéficier de soins infirmiers ?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Cela dépend du soin.<br>Certains actes relevant du rôle propre infirmier ou certaines consultations de prévention peuvent être proposés sans ordonnance. Les soins remboursables tels que les injections, perfusions ou pansements prescrits nécessitent généralement une prescription médicale.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Comment organiser la sortie d'hospitalisation à domicile ?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Il vous suffit de nous contacter ou de réserver votre créneau dès que votre date de sortie est confirmée (idéalement 24 à 48h avant). Nous planifions ensemble l'heure du premier passage et les soins requis selon les directives du service hospitalier.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Intervenez-vous les dimanches et jours fériés ?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Oui, pour assurer la continuité des soins indispensable à votre santé, le cabinet assure des permanences et interventions à domicile 7 jours sur 7, y compris les dimanches et jours fériés sur rendez-vous.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER EPURÉ ET CONFORME -->
+    <footer>
+        <p class="emergency-notice"><strong>En cas d’urgence vitale, composez le 15 ou le 112.</strong></p>
+
+        <p class="legal-notice">
+            Site professionnel d’information conformément aux règles déontologiques applicables à la profession infirmière. Les informations présentées sont objectives et ne constituent pas une publicité comparative.
+        </p>
+
+        <p class="legal-links">
+            <a href="mentions-legales.html">Mentions légales</a> | <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
+        </p>
+
+        <hr class="footer-divider">
+
+        <p class="copyright">
+            © Cabinet d'Infirmières Libérales Marseille 7 - Tous droits réservés
+        </p>
+    </footer>
+
+    <!-- SCRIPT JS POUR INTERACTION FAQ -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const faqAnswer = button.nextElementSibling;
+
+                faqItem.classList.toggle('active');
+
+                if (faqItem.classList.contains('active')) {
+                    faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+                } else {
+                    faqAnswer.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
