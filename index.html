@@ -58,15 +58,20 @@
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: var(--font-body);
             margin: 0;
             padding: 0;
             background-color: var(--bg-body);
             color: var(--text-main);
-            line-height: 1.65;
-            font-size: 1.15rem;
+            line-height: 1.6;
+            font-size: 1.05rem;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
         /* BANNIÈRE HAUT */
@@ -74,27 +79,24 @@
             background-color: #FBEEE5;
             border-bottom: 1px solid var(--sand-soft);
             width: 100%;
-            padding: 0;
-            box-sizing: border-box;
+            padding: 1rem 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
         }
 
         .header-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 3rem;
-            max-width: 1700px;
+            gap: 2rem;
+            max-width: 1400px;
             width: 100%;
-            padding: 0 2rem;
-            box-sizing: border-box;
+            padding: 0 1.5rem;
         }
 
         .header-logo {
-            height: 480px;
+            height: 180px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -111,10 +113,10 @@
         .header-title {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            letter-spacing: 4px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            font-size: 4rem;
-            margin: 0 0 0.4rem 0;
+            font-size: 2.8rem;
+            margin: 0 0 0.2rem 0;
             font-weight: 600;
             line-height: 1.1;
         }
@@ -122,9 +124,8 @@
         .header-sub {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2.2rem;
+            font-size: 1.6rem;
             font-style: italic;
-            letter-spacing: 1px;
             margin: 0;
             opacity: 0.95;
         }
@@ -132,54 +133,51 @@
         /* CONTENEUR PRINCIPAL */
         .container {
             width: 100%;
-            max-width: 1700px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2.5rem 2rem;
-            box-sizing: border-box;
+            padding: 2rem 1rem;
         }
 
         .card {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 10px 30px rgba(158, 90, 71, 0.04);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 20px rgba(158, 90, 71, 0.04);
             border: 1px solid #F3EAED;
             width: 100%;
-            box-sizing: border-box;
         }
 
         h2 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2.8rem;
+            font-size: 2.3rem;
             margin-top: 0;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
             text-align: center;
         }
 
         .team-title {
-            font-size: 3.6rem;
+            font-size: 2.6rem;
         }
 
         /* BANNIÈRE PAYSAGE GROUPE */
         .main-photo-container {
             width: 100%;
-            height: 600px;
+            max-height: 500px;
             border-radius: 16px;
             overflow: hidden;
-            margin-bottom: 2rem;
-            box-shadow: 0 6px 20px rgba(158, 90, 71, 0.08);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(158, 90, 71, 0.08);
             background-color: #FAF5F0;
         }
 
         .main-photo {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 35%;
+            height: auto;
             display: block;
+            object-fit: cover;
         }
 
         /* TEXTE PRESENTATION */
@@ -187,61 +185,59 @@
             background-color: #F8EFEA;
             border: 1px solid var(--terracotta-soft);
             border-radius: 16px;
-            padding: 2.5rem 2rem;
+            padding: 1.8rem 1.5rem;
             text-align: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         .intro-box h3 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 3.2rem;
-            margin: 0 0 1rem 0;
+            font-size: 2.2rem;
+            margin: 0 0 0.8rem 0;
             font-weight: 600;
         }
 
         .intro-box p {
-            font-size: 1.45rem;
-            line-height: 1.7;
+            font-size: 1.15rem;
+            line-height: 1.6;
             color: var(--text-main);
             margin: 0 auto;
-            width: 100%;
         }
 
         .intro-box .key-points {
-            margin-top: 1.2rem;
+            margin-top: 1rem;
             font-weight: 600;
             color: var(--terracotta-dark);
-            font-size: 1.35rem;
+            font-size: 1.1rem;
         }
 
         /* CARTES INDIVIDUELLES PORTRAITS */
         .duo-photos { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
-            gap: 3rem; 
+            gap: 2rem; 
             width: 100%;
         }
 
         .person-card { 
             background: #FFFFFF;
             border: 1px solid #F3EAED;
-            border-radius: 24px;
-            padding: 3rem 3rem; 
-            box-shadow: 0 6px 20px rgba(158, 90, 71, 0.05);
+            border-radius: 20px;
+            padding: 2rem 1.5rem; 
+            box-shadow: 0 4px 15px rgba(158, 90, 71, 0.05);
             text-align: center; 
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-sizing: border-box;
         }
 
         .person-photo-container {
             width: 100%;
-            height: 560px;
-            border-radius: 20px;
+            max-height: 400px;
+            border-radius: 16px;
             overflow: hidden;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.2rem;
             background-color: var(--portrait-bg);
             display: flex;
             justify-content: center;
@@ -251,7 +247,7 @@
         .person-photo {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             display: block;
         }
 
@@ -260,43 +256,39 @@
             font-weight: 600;
             color: var(--terracotta-dark);
             margin: 0.2rem 0 0 0;
-            font-size: 2.8rem;
+            font-size: 2.2rem;
         }
 
         .person-role {
             font-family: var(--font-title);
-            font-size: 1.85rem;
+            font-size: 1.4rem;
             font-style: italic;
             color: var(--text-main);
-            margin: 0 0 1.5rem 0;
+            margin: 0 0 1.2rem 0;
             opacity: 0.85;
         }
 
         .person-bio {
-            font-size: 1.6rem;
+            font-size: 1.1rem;
             color: var(--text-main);
-            line-height: 1.75;
-            margin: 0 0 2rem 0;
-            padding: 0;
-            width: 100%;
-            box-sizing: border-box;
+            line-height: 1.6;
+            margin: 0 0 1.5rem 0;
         }
 
-        /* TITRES STYLE SAVOIR-FAIRE */
         .specialties-title {
             font-family: var(--font-title);
-            font-size: 1.75rem;
+            font-size: 1.4rem;
             font-weight: 600;
             color: var(--terracotta-dark);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .specialties-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.85rem;
+            gap: 0.6rem;
             justify-content: center;
             width: 100%;
         }
@@ -305,19 +297,18 @@
             background-color: #F8EFEA;
             color: var(--terracotta-dark);
             border: 1px solid var(--terracotta-soft);
-            padding: 0.75rem 1.35rem;
-            border-radius: 26px;
-            font-size: 1.45rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
             font-weight: 500;
-            line-height: 1.4;
         }
 
         /* BOUTONS RENDEZ-VOUS ET APPEL SUR LA PAGE */
         .buttons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.8rem;
         }
 
         .btn {
@@ -325,80 +316,64 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 75px;
-            padding: 0.9rem 1.2rem;
+            min-height: 60px;
+            padding: 0.8rem 1rem;
             text-align: center;
             text-decoration: none;
-            line-height: 1.3;
-            border-radius: 38px;
-            box-sizing: border-box;
+            border-radius: 30px;
             transition: all 0.3s ease;
-            white-space: normal;
-            word-break: break-word;
-            overflow-wrap: break-word;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
         }
 
         .btn-doctolib { 
             background-color: var(--doctolib-blue); 
             color: white; 
             font-weight: 600;
-            font-size: 1.35rem;
+            font-size: 1.15rem;
         }
 
-        /* BOUTONS D'APPEL SABLE OCRE CHAUD */
         .btn-call { 
             background-color: var(--sand-ochre); 
             color: white; 
         }
 
-        .btn-call:hover {
-            background-color: var(--sand-ochre-hover);
-        }
-
         .btn-call strong {
-            font-size: 1.35rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            display: inline-block;
+            display: block;
         }
 
         .btn-call small {
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             opacity: 0.95;
-            font-weight: 500;
         }
 
-        /* SYSTEME FLOTTANT (PC & MOBILE) */
+        /* SYSTEME FLOTTANT (PC & MOBILE COMPACT) */
         .floating-action-container {
             position: fixed;
-            right: 25px;
-            bottom: 30px;
+            right: 20px;
+            bottom: 20px;
             z-index: 9999;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
             align-items: flex-end;
         }
 
         .floating-btn {
             background-color: var(--doctolib-blue);
             color: white;
-            padding: 18px 30px;
-            border-radius: 50px;
+            padding: 12px 20px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 800;
-            font-size: 1.3rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            font-weight: 700;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
-            gap: 12px;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 3px solid white;
-            box-sizing: border-box;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            white-space: nowrap;
         }
 
         .floating-btn-call {
@@ -409,93 +384,102 @@
             background-color: var(--sand-ochre-hover);
         }
 
-        .floating-btn:hover {
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-        }
-
-        .floating-btn .btn-icon {
-            font-size: 1.5rem;
-        }
-
-        @media (max-width: 950px) {
+        /* MEDIA QUERIES ADAPTATIONS MOBILE */
+        @media (max-width: 850px) {
             body {
-                padding-bottom: 270px !important;
+                padding-bottom: 165px !important; /* Dégage le bas pour lire tout le contenu */
             }
 
+            .header-container {
+                flex-direction: column;
+                gap: 0.8rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .header-logo {
+                height: 110px;
+            }
+
+            .header-title {
+                font-size: 1.8rem;
+            }
+
+            .header-sub {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 1rem 0.8rem;
+            }
+
+            .card {
+                padding: 1.2rem 1.0rem;
+            }
+
+            .duo-photos, .maps-grid, .tarifs-grid {
+                grid-template-columns: 1fr !important; /* Passent impérativement sur 1 seule colonne */
+                gap: 1.2rem;
+            }
+
+            /* BARRE FIXE DU BAS DEVENUE FIN ET PROPRE */
             .floating-action-container {
                 position: fixed;
                 bottom: 0;
                 left: 0;
                 right: 0;
                 top: auto;
-                background: #FFFFFF;
-                border-top: 3px solid var(--terracotta-soft);
-                padding: 12px 14px 20px 14px;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(5px);
+                border-top: 1px solid var(--terracotta-soft);
+                padding: 8px 10px 12px 10px;
                 flex-direction: column;
                 align-items: stretch;
-                gap: 10px;
-                box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.25);
+                gap: 6px;
+                box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.12);
             }
 
             .floating-btn {
                 width: 100%;
                 justify-content: center;
-                padding: 18px 12px;
-                border-radius: 16px;
-                font-size: 1.3rem;
-                font-weight: 800;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                padding: 8px 10px;
+                border-radius: 10px;
+                font-size: 0.95rem;
+                font-weight: 600;
+                box-shadow: none;
                 border: none;
-                text-align: center;
+                white-space: nowrap;
             }
 
             .floating-btn .btn-icon {
+                font-size: 1.1rem;
+            }
+
+            .person-card {
+                padding: 1.2rem 1rem;
+            }
+
+            .person-name {
+                font-size: 1.8rem;
+            }
+
+            .person-role {
+                font-size: 1.2rem;
+            }
+
+            .person-bio {
+                font-size: 1rem;
+            }
+
+            h2, .team-title {
+                font-size: 1.8rem;
+            }
+
+            .intro-box h3 {
                 font-size: 1.6rem;
             }
 
-            .floating-btn-call {
-                display: flex !important;
-            }
-
-            .duo-photos, .maps-grid, .tarifs-grid { grid-template-columns: 1fr; }
-            .container { padding: 1rem; }
-            .card { padding: 1.5rem; }
-            .person-card { padding: 2rem 1.2rem; }
-            .main-photo-container { height: 350px; }
-            .person-photo-container { height: 420px; }
-            .person-name { font-size: 2.2rem; }
-            .person-role { font-size: 1.4rem; }
-            .person-bio { font-size: 1.25rem; }
-            .specialties-title { font-size: 1.35rem; }
-            .tag { font-size: 1.15rem; }
-            .team-title { font-size: 2.7rem; }
-            .intro-box h3 { font-size: 2.4rem; }
-            .intro-box p { font-size: 1.25rem; }
-            .intro-box br { display: none; }
-            .info-box-container { padding: 1.5rem; }
-            .info-box-container h3 { font-size: 2.1rem; }
-            .info-single-column ul { padding-left: 1.2rem; font-size: 1.25rem; }
-            .info-list li { font-size: 1.35rem; }
-            .map-box-title, .sector-caption { font-size: 1.35rem; }
-            .btn-doctolib { font-size: 1.2rem; }
-            .btn-call strong { font-size: 1.2rem; }
-            .btn-call small { font-size: 1.05rem; }
-            .header-container { flex-direction: column; gap: 1rem; padding: 1.5rem; }
-            .header-title { font-size: 2.7rem; }
-            .header-sub { font-size: 1.4rem; }
-            .header-logo { height: 300px; }
-
-            .tarif-intro-text {
-                font-size: 1.25rem !important;
-            }
-
-            .tarif-actions {
-                flex-direction: column;
-            }
-
-            .btn-tarif {
-                width: 100% !important;
+            .intro-box p {
+                font-size: 1rem;
             }
         }
 
@@ -504,83 +488,74 @@
             background-color: #F8EFEA;
             border: 1px solid var(--terracotta-soft);
             border-radius: 16px;
-            padding: 2.5rem 3rem;
-            margin-top: 1.5rem;
+            padding: 1.8rem 1.5rem;
+            margin-top: 1.2rem;
         }
 
         .info-box-container h3 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2.6rem;
+            font-size: 2rem;
             margin-top: 0;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.2rem;
             text-align: center;
         }
 
         .info-single-column ul {
             margin: 0;
-            padding-left: 1.8rem;
-            font-size: 1.6rem;
-            line-height: 1.8;
+            padding-left: 1.2rem;
+            font-size: 1.15rem;
+            line-height: 1.7;
             color: var(--text-main);
-            text-align: left;
         }
 
         .info-single-column ul li {
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.8rem;
         }
 
-        .info-single-column ul li:last-child {
-            margin-bottom: 0;
-        }
-
-        /* TEXTE REGLEMENTATION TARIFS AGRANDI */
         .tarif-intro-text {
             text-align: center;
-            font-size: 1.6rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
             color: var(--text-main);
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         /* SECTION TARIFS & HONORAIRES HARMONISÉE */
         .tarifs-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 1.5rem;
+            gap: 1.5rem;
+            margin-top: 1.2rem;
         }
 
         .tarif-card {
             background: #FFFFFF;
-            border-radius: 18px;
+            border-radius: 16px;
             overflow: hidden;
-            border: 2px solid var(--terracotta-soft);
+            border: 1.5px solid var(--terracotta-soft);
             display: flex;
             flex-direction: column;
-            box-shadow: 0 8px 24px rgba(158, 90, 71, 0.12);
+            box-shadow: 0 4px 15px rgba(158, 90, 71, 0.08);
         }
 
         .tarif-header {
             background-color: #FAF0EC;
-            padding: 1.6rem 1rem;
+            padding: 1.2rem 1rem;
             text-align: center;
-            border-bottom: 2px solid var(--terracotta-soft);
+            border-bottom: 1px solid var(--terracotta-soft);
         }
 
         .tarif-header h3 {
             font-family: var(--font-title);
             color: var(--terracotta-dark);
-            font-size: 2.3rem;
+            font-size: 1.8rem;
             margin: 0;
             font-weight: 600;
         }
 
         .tarif-body {
-            padding: 2rem;
+            padding: 1.5rem 1rem;
             background-color: #FFFFFF;
             text-align: center;
             flex-grow: 1;
@@ -591,77 +566,59 @@
         }
 
         .tarif-icon {
-            font-size: 3.8rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
         }
 
         .tarif-desc {
-            font-size: 1.35rem;
+            font-size: 1.05rem;
             color: var(--text-main);
             margin: 0;
-            line-height: 1.65;
+            line-height: 1.5;
         }
 
-        /* BOUTONS D'ACTIONS MOITIÉ-MOITIÉ DES TABLEAUX */
         .tarif-actions {
-            padding: 1.2rem 1.5rem;
+            padding: 1rem;
             background-color: #FAF0EC;
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
             justify-content: space-between;
-            border-top: 2px solid var(--terracotta-soft);
-            box-sizing: border-box;
+            border-top: 1px solid var(--terracotta-soft);
         }
 
         .btn-tarif {
             flex: 1;
             background-color: #FFFFFF;
-            border: 2px solid var(--terracotta-dark);
+            border: 1.5px solid var(--terracotta-dark);
             color: var(--terracotta-dark);
-            padding: 1rem 0.8rem;
-            border-radius: 25px;
+            padding: 0.7rem 0.5rem;
+            border-radius: 20px;
             text-decoration: none;
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 600;
-            transition: all 0.25s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.6rem;
+            gap: 0.4rem;
             text-align: center;
-            box-sizing: border-box;
-        }
-
-        .btn-tarif:hover {
-            background-color: #E8D2C9;
-            color: var(--terracotta-dark);
-            transform: translateY(-2px);
         }
 
         .btn-tarif-primary {
             background-color: var(--terracotta-dark);
             color: #FFFFFF;
-            border-color: var(--terracotta-dark);
-        }
-
-        .btn-tarif-primary:hover {
-            background-color: #834736;
-            border-color: #834736;
-            color: #FFFFFF;
-            transform: translateY(-2px);
         }
 
         /* SECTION CABINETS ET PERIMETRE */
         .info-list { 
             list-style: none; 
             padding: 0; 
-            margin: 0 0 2rem 0; 
+            margin: 0 0 1.5rem 0; 
         }
 
         .info-list li { 
-            padding: 1rem 0; 
+            padding: 0.8rem 0; 
             border-bottom: 1px solid #FAF5F0; 
-            font-size: 1.75rem; 
+            font-size: 1.3rem; 
             font-family: var(--font-title);
             color: var(--text-main);
         }
@@ -669,20 +626,14 @@
         .info-list li strong { 
             color: var(--terracotta-dark); 
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .info-list li:last-child { 
-            border-bottom: none; 
         }
 
         /* PERIMETRE & CARTES */
         .maps-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 1.8rem;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .map-box {
@@ -699,27 +650,25 @@
             background-color: #F8EFEA;
             color: var(--terracotta-dark);
             font-weight: 600;
-            font-size: 1.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 1.2rem 1rem;
+            font-size: 1.5rem;
+            padding: 1rem;
             text-align: center;
             border-bottom: 1px solid #EDE4DB;
         }
 
         .map-box iframe, .map-box img {
             width: 100%;
-            height: 420px;
+            height: 320px;
             border: 0;
             object-fit: cover;
             display: block;
         }
 
         .map-links-btns {
-            padding: 1.2rem;
+            padding: 1rem;
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
+            gap: 0.5rem;
             background-color: var(--card-bg);
             margin-top: auto;
         }
@@ -728,47 +677,38 @@
             background-color: white;
             border: 1px solid var(--terracotta-soft);
             color: var(--terracotta-dark);
-            padding: 0.8rem;
-            border-radius: 20px;
+            padding: 0.6rem;
+            border-radius: 16px;
             text-align: center;
             text-decoration: none;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
         }
 
         .sector-caption {
-            font-size: 1.75rem;
+            font-size: 1.3rem;
             font-family: var(--font-title);
             text-align: center;
             color: var(--text-main);
-            padding: 0.5rem;
-            line-height: 1.5;
         }
 
         .sector-caption strong {
             color: var(--terracotta-dark);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .sector-description {
             font-family: var(--font-body);
-            font-size: 1.2rem;
-            text-transform: none;
-            margin-top: 0.6rem;
+            font-size: 1rem;
+            margin-top: 0.4rem;
             display: block;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
-        /* STYLES FAQ ACCORDÉON */
+        /* FAQ ACCORDÉON */
         .faq-item {
             border: 1px solid var(--sand-soft);
             border-radius: 12px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             overflow: hidden;
             background: #FAF5F0;
         }
@@ -778,9 +718,9 @@
             text-align: left;
             background: none;
             border: none;
-            padding: 1.3rem 1.6rem;
+            padding: 1rem 1.2rem;
             font-family: var(--font-title);
-            font-size: 1.55rem;
+            font-size: 1.35rem;
             font-weight: 600;
             color: var(--terracotta-dark);
             cursor: pointer;
@@ -791,9 +731,8 @@
 
         .faq-question::after {
             content: '+';
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: var(--terracotta-dark);
-            margin-left: 10px;
         }
 
         .faq-item.active .faq-question::after {
@@ -804,54 +743,45 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
-            padding: 0 1.6rem;
+            padding: 0 1.2rem;
             background-color: #FFFFFF;
-            font-size: 1.18rem;
-            line-height: 1.75;
+            font-size: 1.05rem;
+            line-height: 1.6;
         }
 
         .faq-answer-content {
-            padding: 1.2rem 0;
+            padding: 1rem 0;
         }
 
-        /* PIED DE PAGE EPURÉ */
+        /* PIED DE PAGE */
         footer {
             text-align: center;
-            padding: 3.5rem 1.5rem 3rem;
-            font-size: 1.05rem;
+            padding: 2rem 1rem;
+            font-size: 0.95rem;
             color: var(--text-main);
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .emergency-notice {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--terracotta-dark);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .legal-notice { 
-            font-size: 0.95rem; 
-            line-height: 1.7; 
-            margin-bottom: 1.2rem; 
+            font-size: 0.9rem; 
+            line-height: 1.6; 
+            margin-bottom: 1rem; 
             color: #6E5E5C; 
             font-style: italic; 
-        }
-
-        .legal-links {
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
         }
 
         .legal-links a {
             color: var(--terracotta-dark);
             text-decoration: none;
             font-weight: 600;
-            margin: 0 8px;
-        }
-
-        .legal-links a:hover {
-            text-decoration: underline;
+            margin: 0 6px;
         }
 
         .footer-divider { 
@@ -859,12 +789,12 @@
             height: 1px; 
             background-color: #DCD0C5; 
             width: 40%; 
-            margin: 1.5rem auto; 
+            margin: 1.2rem auto; 
         }
 
         .copyright { 
             font-family: var(--font-title); 
-            font-size: 1.3rem; 
+            font-size: 1.15rem; 
             color: var(--terracotta-dark); 
             margin: 0; 
         }
@@ -872,7 +802,7 @@
 </head>
 <body>
 
-    <!-- SYSTEME FLOTTANT ACCESSIBLE PARTOUT -->
+    <!-- SYSTEME FLOTTANT COMPACT MOBILE & DESKTOP -->
     <div class="floating-action-container">
         <a href="https://www.doctolib.fr/cabinet-infirmier/marseille/cabinet-de-soins-infirmiers-faure-bernard?pid=practice-788712&phs=true&page=1" class="floating-btn" target="_blank" rel="noopener">
             <span class="btn-icon">📅</span>
@@ -904,24 +834,18 @@
         <div class="card">
             <h2 class="team-title">Notre Cabinet & Notre Équipe</h2>
             
-            <!-- PHOTO DE GROUPE PAYSAGE -->
             <div class="main-photo-container">
                 <img src="photo-groupe.PNG" alt="Alexandra Bernard et Lucille Faure - Infirmières Libérales Marseille 7" class="main-photo">
             </div>
 
-            <!-- ENCADRÉ PRÉSENTATION -->
             <div class="intro-box">
                 <h3>Une équipe de proximité à votre service</h3>
                 <p>
-                    Complémentaires et passionnées, nous mettons notre bienveillance et notre savoir-faire<br>
-                    au service de votre santé et de votre confort au quotidien.<br>
-                    Installées dans le 7ème arrondissement de Marseille, nous assurons la continuité des soins<br>
-                    7j/7 à domicile ainsi qu'au cabinet.
+                    Complémentaires et passionnées, nous mettons notre bienveillance et notre savoir-faire au service de votre santé et de votre confort au quotidien. Installées dans le 7ème arrondissement de Marseille, nous assurons la continuité des soins 7j/7 à domicile ainsi qu'au cabinet.
                 </p>
                 <p class="key-points">• Tiers payant • Accès PMR • Sorties d’hospitalisation</p>
             </div>
 
-            <!-- PHOTOS INDIVIDUELLES ET SPÉCIALITÉS -->
             <div class="duo-photos">
                 <!-- ALEXANDRA -->
                 <div class="person-card">
@@ -932,7 +856,7 @@
                     <p class="person-role">Infirmière Diplômée d'État</p>
                     
                     <p class="person-bio">
-                        Riche d'un parcours en bloc opératoire notamment en chirurgie&nbsp;orthopédique, Alexandra apporte une&nbsp;grande rigueur dans la réalisation des soins post-opératoires, le suivi des actes techniques et la&nbsp;gestion des plaies complexes.
+                        Riche d'un parcours en bloc opératoire notamment en chirurgie orthopédique, Alexandra apporte une grande rigueur dans la réalisation des soins post-opératoires, le suivi des actes techniques et la gestion des plaies complexes.
                     </p>
 
                     <div class="specialties-title">Savoir-faire & Domaines d'intervention</div>
@@ -954,7 +878,7 @@
                     <p class="person-role">Infirmière Diplômée d'État</p>
                     
                     <p class="person-bio">
-                        Attentive et bienveillante, Lucille privilégie une&nbsp;prise&nbsp;en&nbsp;charge&nbsp;globale&nbsp;du&nbsp;patient. Elle est formée à&nbsp;l'accompagnement de l'endométriose ainsi qu'à la&nbsp;réalisation&nbsp;de&nbsp;bilans&nbsp;de prévention et de santé au quotidien.
+                        Attentive et bienveillante, Lucille privilégie une prise en charge globale du patient. Elle est formée à l'accompagnement de l'endométriose ainsi qu'à la réalisation de bilans de prévention et de santé au quotidien.
                     </p>
 
                     <div class="specialties-title">Savoir-faire & Domaines d'intervention</div>
@@ -980,21 +904,20 @@
                 </a>
                 
                 <a href="tel:0650990938" class="btn btn-call">
-                    <span><strong>Appeler Alexandra</strong><br><small>06 50 99 09 38</small></span>
+                    <span><strong>Appeler Alexandra</strong><small>06 50 99 09 38</small></span>
                 </a>
 
                 <a href="tel:0670445032" class="btn btn-call">
-                    <span><strong>Appeler Lucille</strong><br><small>06 70 44 50 32</small></span>
+                    <span><strong>Appeler Lucille</strong><small>06 70 44 50 32</small></span>
                 </a>
             </div>
 
-            <!-- BLOC 1 : INFORMATIONS PRATIQUES -->
             <div class="info-box-container">
                 <h3>Informations Pratiques & Prise en charge</h3>
                 <div class="info-single-column">
                     <ul>
                         <li><strong>Conventionnement :</strong> Infirmières diplômées d'État conventionnées par l'Assurance Maladie.</li>
-                        <li><strong>Tiers-Payant :</strong> Pratique du tiers-payant appliqué (pas d'avance de frais sur la part Sécurité Sociale, selon&nbsp;la&nbsp;réglementation).</li>
+                        <li><strong>Tiers-Payant :</strong> Pratique du tiers-payant appliqué (pas d'avance de frais sur la part Sécurité Sociale).</li>
                         <li><strong>Documents requis :</strong> Ordonnance médicale (si prescrite), Carte Vitale à jour et attestation de mutuelle.</li>
                         <li><strong>Continuité des soins :</strong> Interventions assurées 7j/7, à domicile ou au cabinet.</li>
                         <li><strong>Matériel de soin :</strong> Pensez à récupérer le matériel prescrit en pharmacie avant notre premier passage.</li>
@@ -1003,57 +926,48 @@
                 </div>
             </div>
 
-            <!-- BLOC 2 : ACCESSIBILITÉ PMR & MOYENS DE PAIEMENT -->
             <div class="info-box-container">
                 <h3>Accessibilité PMR & Moyens de paiement</h3>
                 <div class="info-single-column">
                     <ul>
                         <li>
-                            <strong>Accessibilité PMR :</strong> 
-                            Nos deux cabinets sont situés de plain-pied en rez-de-chaussée (sans marche ni ascenseur).
+                            <strong>Accessibilité PMR :</strong> Nos deux cabinets sont situés de plain-pied en rez-de-chaussée.
                             <br>
-                            <em>• Cabinet Corderie :</em> Équipé d'une table d'examen réglable en hauteur, particulièrement adaptée à l'accueil des&nbsp;personnes à mobilité réduite ou nécessitant une aide au transfert.
+                            <em>• Cabinet Corderie :</em> Équipé d'une table d'examen réglable en hauteur, adaptée à l'accueil PMR.
                             <br>
-                            <em>• Cabinet Endoume :</em> Équipé d'une table d'examen fixe (privilégié pour les soins aux personnes autonomes dans&nbsp;leurs déplacements).
+                            <em>• Cabinet Endoume :</em> Équipé d'une table d'examen fixe.
                         </li>
                         <li>
-                            <strong>Moyens de paiement acceptés :</strong> 
-                            Pour les actes hors nomenclature (soins réalisés sans ordonnance) ou&nbsp;la&nbsp;part&nbsp;restant à votre charge, le cabinet accepte les espèces et les virements bancaires.
+                            <strong>Moyens de paiement acceptés :</strong> Espèces et virements bancaires pour les actes hors nomenclature ou la part restant à charge.
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- BLOC 3 : CONSIGNES TÉLÉPHONIQUES & URGENCE -->
             <div class="info-box-container">
                 <h3>Consignes pour le contact téléphonique & Urgences</h3>
                 <div class="info-single-column">
                     <ul>
                         <li>
-                            <strong>Joignabilité téléphonique :</strong> 
-                            En raison des soins dispensés tout au long de la journée, nous ne sommes pas toujours en mesure de répondre immédiatement à vos appels.
+                            <strong>Joignabilité téléphonique :</strong> En soin tout au long de la journée, nous ne pouvons pas toujours répondre immédiatement.
                         </li>
                         <li>
-                            <strong>Message ou SMS :</strong> 
-                            Merci de nous laisser un message (vocal ou SMS) clair et explicite avec vos nom, prénom, numéro de téléphone et l'objet de votre demande afin que nous puissions vous rappeler au plus vite.
+                            <strong>Message ou SMS :</strong> Laissez un message (vocal ou SMS) clair avec vos nom, prénom et motif de demande pour un rappel rapide.
                         </li>
                         <li>
-                            <strong>Urgences vitales :</strong> 
-                            En cas d’urgence vitale, composez immédiatement le <strong>15</strong> (SAMU) ou le <strong>112</strong>.
+                            <strong>Urgences vitales :</strong> Composez le <strong>15</strong> (SAMU) ou le <strong>112</strong>.
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- BLOC 4 : HONORAIRES & GRILLES TARIFAIRES -->
             <div class="info-box-container" id="tarifs">
                 <h3>Honoraires & Grilles Tarifaires</h3>
                 <p class="tarif-intro-text">
-                    Conformément à la réglementation, retrouvez ci-dessous nos documents d'information tarifaire téléchargeables et consultables au format PDF.
+                    Conformément à la réglementation, retrouvez ci-dessous nos documents d'information tarifaire téléchargeables au format PDF.
                 </p>
 
                 <div class="tarifs-grid">
-                    <!-- CARTE SOINS CONVENTIONNÉS -->
                     <div class="tarif-card">
                         <div class="tarif-header">
                             <h3>Soins conventionnés (NGAP)</h3>
@@ -1061,12 +975,12 @@
                         <div class="tarif-body">
                             <div class="tarif-icon">🩺</div>
                             <p class="tarif-desc">
-                                Injections, pansements, ablations de fils/agrafes, suivi du diabète et majorations réglementaires (Tarifs Assurance Maladie 2026).
+                                Injections, pansements, ablations de fils/agrafes, suivi du diabète et majorations réglementaires (Tarifs 2026).
                             </p>
                         </div>
                         <div class="tarif-actions">
                             <a href="tarifs-soins-conventionnes.pdf" target="_blank" class="btn-tarif btn-tarif-primary">
-                                📄 Consulter le PDF
+                                📄 Consulter
                             </a>
                             <a href="tarifs-soins-conventionnes.pdf" download class="btn-tarif">
                                 ⬇️ Télécharger
@@ -1074,7 +988,6 @@
                         </div>
                     </div>
 
-                    <!-- CARTE SOINS HORS NOMENCLATURE -->
                     <div class="tarif-card">
                         <div class="tarif-header">
                             <h3>Soins hors nomenclature</h3>
@@ -1082,12 +995,12 @@
                         <div class="tarif-body">
                             <div class="tarif-icon">📋</div>
                             <p class="tarif-desc">
-                                Actes non pris en charge par l'Assurance Maladie : surveillance & constantes, pose de contention, préparation de pilulier, etc.
+                                Actes non pris en charge par l'Assurance Maladie : surveillance, constantes, pose de contention, etc.
                             </p>
                         </div>
                         <div class="tarif-actions">
                             <a href="tarifs-soins-hors-nomenclature.pdf" target="_blank" class="btn-tarif btn-tarif-primary">
-                                📄 Consulter le PDF
+                                📄 Consulter
                             </a>
                             <a href="tarifs-soins-hors-nomenclature.pdf" download class="btn-tarif">
                                 ⬇️ Télécharger
@@ -1106,7 +1019,7 @@
             <ul class="info-list">
                 <li><strong>Cabinet Corderie :</strong> 67 Boulevard de la Corderie, 13007 Marseille</li>
                 <li><strong>Cabinet Endoume :</strong> 255 Rue d'Endoume, 13007 Marseille</li>
-                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur RDV (pansements, perfusions, injections, etc.).</li>
+                <li><strong>Soins dispensés :</strong> À domicile et au cabinet sur RDV.</li>
             </ul>
 
             <div class="maps-grid">
@@ -1130,7 +1043,7 @@
                         <div class="sector-caption">
                             <strong>Soins à domicile assurés sur :</strong>
                             <span class="sector-description">
-                                Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Samatan, Saint-Victor, Bompard, Roucas-Blanc, Malmousque, Vallon des Auffes) &&nbsp;arrondissements limitrophes.
+                                Marseille 7ème (Endoume, Corderie, Pharo, Catalans, Samatan, Saint-Victor, Bompard, Roucas-Blanc, Malmousque, Vallon des Auffes) & arrondissements limitrophes.
                             </span>
                         </div>
                     </div>
@@ -1143,12 +1056,12 @@
             <h2>Questions Fréquentes (FAQ)</h2>
 
             <div class="faq-item">
-                <button class="faq-question">Je n'ai pas d'ordonnance médicale, puis-je tout de même bénéficier de soins infirmiers ?</button>
+                <button class="faq-question">Je n'ai pas d'ordonnance médicale, puis-je tout de même bénéficier de soins ?</button>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
                         <p>
-                            Cela dépend du soin.<br>Certains actes relevant du rôle propre infirmier ou certaines consultations de prévention peuvent être proposés sans ordonnance. Les soins remboursables tels que les injections, perfusions ou pansements prescrits nécessitent généralement une prescription médicale.<br>
-                            Vous pouvez consulter nos tarifs d'actes hors nomenclature directement dans notre document PDF : <a href="tarifs-soins-hors-nomenclature.pdf" target="_blank" style="color: var(--terracotta-dark); font-weight: 600;">Consulter les tarifs Hors Nomenclature (PDF)</a>.
+                            Certains actes relevant du rôle propre infirmier peuvent être proposés sans ordonnance. Les soins remboursables nécessitent généralement une prescription médicale.<br>
+                            Consultez nos tarifs d'actes hors nomenclature : <a href="tarifs-soins-hors-nomenclature.pdf" target="_blank" style="color: var(--terracotta-dark); font-weight: 600;">Consulter les tarifs Hors Nomenclature (PDF)</a>.
                         </p>
                     </div>
                 </div>
@@ -1158,7 +1071,7 @@
                 <button class="faq-question">Comment organiser la sortie d'hospitalisation à domicile ?</button>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        <p>Il vous suffit de nous contacter ou de réserver votre créneau dès que votre date de sortie est confirmée (idéalement 24 à 48h avant). Nous planifions ensemble l'heure du premier passage et les soins requis selon les directives du service hospitalier.</p>
+                        <p>Contactez-nous ou réservez votre créneau dès que votre date de sortie est confirmée (idéalement 24 à 48h avant).</p>
                     </div>
                 </div>
             </div>
@@ -1167,7 +1080,7 @@
                 <button class="faq-question">Intervenez-vous les dimanches et jours fériés ?</button>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        <p>Oui, pour assurer la continuité des soins indispensable à votre santé, le cabinet assure des permanences et interventions à domicile 7 jours sur 7, y compris les dimanches et jours fériés sur rendez-vous.</p>
+                        <p>Oui, nous assurons des permanences et interventions à domicile 7 jours sur 7, y compris les dimanches et jours fériés sur rendez-vous.</p>
                     </div>
                 </div>
             </div>
@@ -1180,7 +1093,7 @@
         <p class="emergency-notice"><strong>En cas d’urgence vitale, composez le 15 ou le 112.</strong></p>
 
         <p class="legal-notice">
-            Site professionnel d’information conformément aux règles déontologiques applicables à la profession infirmière. Les informations présentées sont objectives et ne constituent pas une publicité comparative.
+            Site professionnel d’information conformément aux règles déontologiques applicables à la profession infirmière.
         </p>
 
         <p class="legal-links">
@@ -1194,7 +1107,6 @@
         </p>
     </footer>
 
-    <!-- SCRIPT JS POUR INTERACTION FAQ -->
     <script>
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
