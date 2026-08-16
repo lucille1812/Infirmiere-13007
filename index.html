@@ -6,6 +6,9 @@
     <title>Cabinet d'Infirmières Libérales 13007 - Alexandra Bernard & Lucille Faure</title>
     <meta name="description" content="Cabinet d'infirmières libérales au 255 Rue d'Endoume et 67 Bd de la Corderie, Marseille 7ème. Soins à domicile dans le 13007 et arrondissements limitrophes.">
     
+    <!-- BALISE FAVICON -->
+    <link rel="icon" type="image/png" href="Logo.or.png">
+
     <!-- POLICES ELEGANTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +51,7 @@
             --text-main: #4A3E3D;
             --doctolib-blue: #0596DE;
             --portrait-bg: #FDF1E2;
-            --sand-ochre: #C2825D; /* Couleur Sable Ocre Chaud appliquée aux boutons d'appel */
+            --sand-ochre: #C2825D;
             --sand-ochre-hover: #A66B49;
             
             --font-title: 'Cormorant Garamond', Georgia, serif;
@@ -620,7 +623,7 @@
             text-decoration: none;
             font-size: 1.25rem;
             font-weight: 600;
-            transition: all 0.25 ease;
+            transition: all 0.25s ease;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -815,16 +818,36 @@
         footer {
             text-align: center;
             padding: 3.5rem 1.5rem 3rem;
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--text-main);
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .emergency-notice {
             font-size: 1.15rem;
             color: var(--terracotta-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-notice-details {
+            background-color: #FAF0EC;
+            border: 1px solid var(--terracotta-soft);
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+
+        .legal-notice-details strong {
+            color: var(--terracotta-dark);
+        }
+
+        .legal-notice-details p {
+            margin: 0.4rem 0;
         }
 
         .legal-notice { 
@@ -1175,6 +1198,18 @@
     <!-- FOOTER EPURÉ ET CONFORME -->
     <footer>
         <p class="emergency-notice"><strong>En cas d’urgence vitale, composez le 15 ou le 112.</strong></p>
+
+        <!-- ENCADRÉ MENTIONS RÉGLEMENTAIRES -->
+        <div class="legal-notice-details">
+            <p><strong>Cabinet d'Infirmières Libérales</strong></p>
+            <p><strong>Infirmières associées :</strong> Alexandra Bernard & Lucille Faure</p>
+            <p><strong>Adresse du cabinet 1 :</strong> 67 Boulevard de la Corderie, 13007 Marseille</p>
+            <p><strong>Adresse du cabinet 2 :</strong> 255 Rue d'Endoume, 13007 Marseille</p>
+            <p><strong>Téléphones :</strong> 06 50 99 09 38 / 06 70 44 50 32</p>
+            <p><strong>Profession :</strong> Infirmières Diplômées d'État (DE) conventionnées Assurance Maladie.</p>
+            <p><strong>Rattachement :</strong> Rattachées à la CPAM des Bouches-du-Rhône (13).</p>
+            <p><strong>Ordre Professionnel :</strong> Inscrites à l'Ordre National des Infirmiers (ONI).</p>
+        </div>
 
         <p class="legal-notice">
             Site professionnel d’information conformément aux règles déontologiques applicables à la profession infirmière. Les informations présentées sont objectives et ne constituent pas une publicité comparative.
