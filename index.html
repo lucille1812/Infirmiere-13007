@@ -48,8 +48,8 @@
             --text-main: #4A3E3D;
             --doctolib-blue: #0596DE;
             --portrait-bg: #FDF1E2;
-            --tarifs-ochre: #C2825D; /* Couleur ocre chaud harmonieuse pour le bouton tarifs */
-            --tarifs-ochre-hover: #A66B49;
+            --sand-ochre: #C2825D; /* Couleur Sable Ocre Chaud appliquée aux boutons d'appel */
+            --sand-ochre-hover: #A66B49;
             
             --font-title: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -309,10 +309,10 @@
             line-height: 1.4;
         }
 
-        /* BOUTONS RENDEZ-VOUS ET TARIFS SUR LA PAGE */
+        /* BOUTONS RENDEZ-VOUS ET APPEL SUR LA PAGE */
         .buttons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
@@ -347,9 +347,14 @@
             font-size: 1.35rem;
         }
 
+        /* BOUTONS D'APPEL SABLE OCRE CHAUD */
         .btn-call { 
-            background-color: var(--terracotta-dark); 
+            background-color: var(--sand-ochre); 
             color: white; 
+        }
+
+        .btn-call:hover {
+            background-color: var(--sand-ochre-hover);
         }
 
         .btn-call strong {
@@ -362,27 +367,6 @@
             font-size: 1.2rem;
             opacity: 0.95;
             font-weight: 500;
-        }
-
-        /* BOUTON TARIFS DISTINCT */
-        .btn-tarifs-nav {
-            background-color: var(--tarifs-ochre);
-            color: white;
-            font-weight: 600;
-        }
-
-        .btn-tarifs-nav:hover {
-            background-color: var(--tarifs-ochre-hover);
-        }
-
-        .btn-tarifs-nav strong {
-            font-size: 1.35rem;
-            display: block;
-        }
-
-        .btn-tarifs-nav small {
-            font-size: 1.15rem;
-            opacity: 0.95;
         }
 
         /* SYSTEME FLOTTANT (PC & MOBILE) */
@@ -415,7 +399,11 @@
         }
 
         .floating-btn-call {
-            background-color: var(--terracotta-dark);
+            background-color: var(--sand-ochre);
+        }
+
+        .floating-btn-call:hover {
+            background-color: var(--sand-ochre-hover);
         }
 
         .floating-btn:hover {
@@ -490,8 +478,6 @@
             .btn-doctolib { font-size: 1.2rem; }
             .btn-call strong { font-size: 1.2rem; }
             .btn-call small { font-size: 1.05rem; }
-            .btn-tarifs-nav strong { font-size: 1.2rem; }
-            .btn-tarifs-nav small { font-size: 1.05rem; }
             .header-container { flex-direction: column; gap: 1rem; padding: 1.5rem; }
             .header-title { font-size: 2.7rem; }
             .header-sub { font-size: 1.4rem; }
@@ -533,7 +519,7 @@
             margin-bottom: 0;
         }
 
-        /* SECTION SECTION TARIFS & HONORAIRES */
+        /* SECTION TARIFS & HONORAIRES HARMONISÉE */
         .tarifs-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -542,7 +528,7 @@
         }
 
         .tarif-card {
-            background: #FAF5F0;
+            background: #FFFFFF;
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--sand-soft);
@@ -552,7 +538,7 @@
         }
 
         .tarif-header {
-            background-color: #F8EFEA;
+            background-color: #FAF5F0;
             padding: 1.4rem 1rem;
             text-align: center;
             border-bottom: 1px solid var(--sand-soft);
@@ -591,7 +577,7 @@
 
         .tarif-actions {
             padding: 1.2rem;
-            background-color: var(--card-bg);
+            background-color: #FAF5F0;
             display: flex;
             gap: 1rem;
             justify-content: center;
@@ -963,11 +949,6 @@
                 <a href="tel:0670445032" class="btn btn-call">
                     <span><strong>Appeler Lucille</strong><br><small>06 70 44 50 32</small></span>
                 </a>
-
-                <!-- BOUTON TARIFS AVEC ANCRE DUCTILE -->
-                <a href="#tarifs" class="btn btn-tarifs-nav">
-                    <span><strong>Honoraires & Tarifs</strong><br><small>Consulter nos grilles (PDF)</small></span>
-                </a>
             </div>
 
             <!-- BLOC 1 : INFORMATIONS PRATIQUES -->
@@ -1026,58 +1007,59 @@
                     </ul>
                 </div>
             </div>
-        </div>
 
-        <!-- SECTION TARIFS & HONORAIRES -->
-        <div class="card" id="tarifs">
-            <h2>Honoraires & Grilles Tarifaires</h2>
-            <p style="text-align: center; font-size: 1.3rem; margin-bottom: 2rem; color: var(--text-main); max-width: 900px; margin-left: auto; margin-right: auto;">
-                Conformément à la réglementation, retrouvez ci-dessous nos documents d'information tarifaire téléchargeables et consultables au format PDF.
-            </p>
+            <!-- BLOC 4 : HONORAIRES & GRILLES TARIFAIRES (HARMONISÉ AVEC LE MÊME FOND DE BLOC) -->
+            <div class="info-box-container" id="tarifs">
+                <h3>Honoraires & Grilles Tarifaires</h3>
+                <p style="text-align: center; font-size: 1.25rem; margin-bottom: 2rem; color: var(--text-main); max-width: 900px; margin-left: auto; margin-right: auto;">
+                    Conformément à la réglementation, retrouvez ci-dessous nos documents d'information tarifaire téléchargeables et consultables au format PDF.
+                </p>
 
-            <div class="tarifs-grid">
-                <!-- CARTE SOINS CONVENTIONNÉS -->
-                <div class="tarif-card">
-                    <div class="tarif-header">
-                        <h3>Soins conventionnés (NGAP)</h3>
+                <div class="tarifs-grid">
+                    <!-- CARTE SOINS CONVENTIONNÉS -->
+                    <div class="tarif-card">
+                        <div class="tarif-header">
+                            <h3>Soins conventionnés (NGAP)</h3>
+                        </div>
+                        <div class="tarif-body">
+                            <div class="tarif-icon">📋</div>
+                            <p class="tarif-desc">
+                                Injections, pansements, ablations de fils/agrafes, suivi du diabète et majorations réglementaires (Tarifs Assurance Maladie 2026).
+                            </p>
+                        </div>
+                        <div class="tarif-actions">
+                            <a href="tarifs-soins-conventionnes.pdf" target="_blank" class="btn-tarif btn-tarif-primary">
+                                📄 Consulter le PDF
+                            </a>
+                            <a href="tarifs-soins-conventionnes.pdf" download class="btn-tarif">
+                                ⬇️ Télécharger
+                            </a>
+                        </div>
                     </div>
-                    <div class="tarif-body">
-                        <div class="tarif-icon">📋</div>
-                        <p class="tarif-desc">
-                            Injections, pansements, ablations de fils/agrafes, suivi du diabète et majorations réglementaires (Tarifs Assurance Maladie 2026).
-                        </p>
-                    </div>
-                    <div class="tarif-actions">
-                        <a href="tarifs-soins-conventionnes.pdf" target="_blank" class="btn-tarif btn-tarif-primary">
-                            📄 Consulter le PDF
-                        </a>
-                        <a href="tarifs-soins-conventionnes.pdf" download class="btn-tarif">
-                            ⬇️ Télécharger
-                        </a>
-                    </div>
-                </div>
 
-                <!-- CARTE SOINS HORS NOMENCLATURE -->
-                <div class="tarif-card">
-                    <div class="tarif-header">
-                        <h3>Soins hors nomenclature</h3>
-                    </div>
-                    <div class="tarif-body">
-                        <div class="tarif-icon">🩺</div>
-                        <p class="tarif-desc">
-                            Actes non pris en charge par l'Assurance Maladie : surveillance & constantes, pose de contention, préparation de pilulier, etc.
-                        </p>
-                    </div>
-                    <div class="tarif-actions">
-                        <a href="tarifs-soins-hors-nomenclature.pdf" target="_blank" class="btn-tarif btn-tarif-primary">
-                            📄 Consulter le PDF
-                        </a>
-                        <a href="tarifs-soins-hors-nomenclature.pdf" download class="btn-tarif">
-                            ⬇️ Télécharger
-                        </a>
+                    <!-- CARTE SOINS HORS NOMENCLATURE -->
+                    <div class="tarif-card">
+                        <div class="tarif-header">
+                            <h3>Soins hors nomenclature</h3>
+                        </div>
+                        <div class="tarif-body">
+                            <div class="tarif-icon">🩺</div>
+                            <p class="tarif-desc">
+                                Actes non pris en charge par l'Assurance Maladie : surveillance & constantes, pose de contention, préparation de pilulier, etc.
+                            </p>
+                        </div>
+                        <div class="tarif-actions">
+                            <a href="tarifs-soins-hors-nomenclature.pdf" target="_blank" class="btn-tarif btn-tarif-primary">
+                                📄 Consulter le PDF
+                            </a>
+                            <a href="tarifs-soins-hors-nomenclature.pdf" download class="btn-tarif">
+                                ⬇️ Télécharger
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <!-- INFORMATIONS PRATIQUES & CARTES -->
